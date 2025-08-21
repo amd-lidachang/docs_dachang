@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
@@ -27,11 +27,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/documentation_options.js?v=490739ad"></script>
+        <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -49,7 +47,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search">
             <a href="../../../index.html" class="icon icon-home"> Vitis™ AI
-            <img src="../../../_static/xilinx-header-logo.svg" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 3.5
@@ -84,7 +81,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p class="caption" role="heading"><span class="caption-text">Runtime API Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../classlist.html">C++ API Class</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Class vart::BaseRunner</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Class vart::BaseRunner</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4I00EN4vart10BaseRunnerE"><code class="docutils literal notranslate"><span class="pre">vart::BaseRunner</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N4vart10BaseRunner13execute_asyncE9InputType10OutputType"><code class="docutils literal notranslate"><span class="pre">execute_async()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N4vart10BaseRunner4waitEii"><code class="docutils literal notranslate"><span class="pre">wait()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="classvart_1_1_runner.html">Class vart::Runner</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classvart_1_1_runner_ext.html">Class vart::RunnerExt</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classvart_1_1_tensor_buffer.html">Class vart::TensorBuffer</a></li>
@@ -144,16 +148,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
            <div itemprop="articleBody">
              
   <section id="class-vart-baserunner">
-<h1>Class vart::BaseRunner<a class="headerlink" href="#class-vart-baserunner" title="Permalink to this heading">¶</a></h1>
+<h1>Class vart::BaseRunner<a class="headerlink" href="#class-vart-baserunner" title="Link to this heading">¶</a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4I00EN4vart10BaseRunnerE">
-<span id="_CPPv3I00EN4vart10BaseRunnerE"></span><span id="_CPPv2I00EN4vart10BaseRunnerE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">InputType</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OutputType</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN4vart10BaseRunnerE" title="vart::BaseRunner::InputType"><span class="n"><span class="pre">InputType</span></span></a><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classvart_1_1_base_runner"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BaseRunner</span></span></span><a class="headerlink" href="#_CPPv4I00EN4vart10BaseRunnerE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3I00EN4vart10BaseRunnerE"></span><span id="_CPPv2I00EN4vart10BaseRunnerE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">InputType</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OutputType</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN4vart10BaseRunnerE" title="vart::BaseRunner::InputType"><span class="n"><span class="pre">InputType</span></span></a><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classvart_1_1_base_runner"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BaseRunner</span></span></span><a class="headerlink" href="#_CPPv4I00EN4vart10BaseRunnerE" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Subclassed by <a class="reference internal" href="../namespace/namespacevart.html#classvart_1_1_runner"><span class="std std-ref">Runner</span></a></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N4vart10BaseRunner13execute_asyncE9InputType10OutputType">
-<span id="_CPPv3N4vart10BaseRunner13execute_asyncE9InputType10OutputType"></span><span id="_CPPv2N4vart10BaseRunner13execute_asyncE9InputType10OutputType"></span><span id="vart::BaseRunner::execute_async__InputType.OutputType"></span><span class="target" id="classvart_1_1_base_runner_1a3a6ebaa53c9250e3c739c3c407c1c20f"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint32_t</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">execute_async</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I00EN4vart10BaseRunnerE" title="vart::BaseRunner::InputType"><span class="n"><span class="pre">InputType</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">input</span></span>, <a class="reference internal" href="#_CPPv4I00EN4vart10BaseRunnerE" title="vart::BaseRunner::OutputType"><span class="n"><span class="pre">OutputType</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">output</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N4vart10BaseRunner13execute_asyncE9InputType10OutputType" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4vart10BaseRunner13execute_asyncE9InputType10OutputType"></span><span id="_CPPv2N4vart10BaseRunner13execute_asyncE9InputType10OutputType"></span><span id="vart::BaseRunner::execute_async__InputType.OutputType"></span><span class="target" id="classvart_1_1_base_runner_1a3a6ebaa53c9250e3c739c3c407c1c20f"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint32_t</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">execute_async</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I00EN4vart10BaseRunnerE" title="vart::BaseRunner::InputType"><span class="n"><span class="pre">InputType</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">input</span></span>, <a class="reference internal" href="#_CPPv4I00EN4vart10BaseRunnerE" title="vart::BaseRunner::OutputType"><span class="n"><span class="pre">OutputType</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">output</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N4vart10BaseRunner13execute_asyncE9InputType10OutputType" title="Link to this definition">¶</a><br /></dt>
 <dd><p><a class="reference internal" href="../python/execute__async_8py.html#namespaceexecute__async"><span class="std std-ref">execute_async</span></a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -170,7 +174,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N4vart10BaseRunner4waitEii">
-<span id="_CPPv3N4vart10BaseRunner4waitEii"></span><span id="_CPPv2N4vart10BaseRunner4waitEii"></span><span id="vart::BaseRunner::wait__i.i"></span><span class="target" id="classvart_1_1_base_runner_1a4749da8b1f941dfdecea936f355319b5"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">wait</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">jobid</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">timeout</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N4vart10BaseRunner4waitEii" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N4vart10BaseRunner4waitEii"></span><span id="_CPPv2N4vart10BaseRunner4waitEii"></span><span id="vart::BaseRunner::wait__i.i"></span><span class="target" id="classvart_1_1_base_runner_1a4749da8b1f941dfdecea936f355319b5"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">wait</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">jobid</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">timeout</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N4vart10BaseRunner4waitEii" title="Link to this definition">¶</a><br /></dt>
 <dd><p>wait </p>
 <p>modes: 1. Blocking wait for specific ID. 2. Non-blocking wait for specific ID. 3. Blocking wait for any ID. 4. Non-blocking wait for any ID</p>
 <dl class="field-list simple">
@@ -205,7 +209,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022-2023, Advanced Micro Devices, Inc.
-      <span class="lastupdated">Last updated on July 19, 2023.
+      <span class="lastupdated">Last updated on August 21, 2025.
       </span></p>
   </div>
 

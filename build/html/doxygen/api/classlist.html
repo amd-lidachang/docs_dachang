@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
@@ -27,11 +27,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/documentation_options.js?v=490739ad"></script>
+        <script src="../../_static/doctools.js?v=9bcbadda"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -49,7 +47,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search">
             <a href="../../index.html" class="icon icon-home"> Vitis™ AI
-            <img src="../../_static/xilinx-header-logo.svg" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 3.5
@@ -143,14 +140,84 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
            <div itemprop="articleBody">
              
   <section id="c-api-class">
-<h1>C++ API Class<a class="headerlink" href="#c-api-class" title="Permalink to this heading">¶</a></h1>
+<h1>C++ API Class<a class="headerlink" href="#c-api-class" title="Link to this heading">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="class/classvart_1_1_base_runner.html">Class vart::BaseRunner</a></li>
-<li class="toctree-l1"><a class="reference internal" href="class/classvart_1_1_runner.html">Class vart::Runner</a></li>
-<li class="toctree-l1"><a class="reference internal" href="class/classvart_1_1_runner_ext.html">Class vart::RunnerExt</a></li>
-<li class="toctree-l1"><a class="reference internal" href="class/classvart_1_1_tensor_buffer.html">Class vart::TensorBuffer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="class/classvart_1_1_tensor_buffer_ext.html">Class vart::TensorBufferExt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="class/classvart_1_1_base_runner.html">Class vart::BaseRunner</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class/classvart_1_1_base_runner.html#_CPPv4I00EN4vart10BaseRunnerE"><code class="docutils literal notranslate"><span class="pre">vart::BaseRunner</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_base_runner.html#_CPPv4N4vart10BaseRunner13execute_asyncE9InputType10OutputType"><code class="docutils literal notranslate"><span class="pre">execute_async()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_base_runner.html#_CPPv4N4vart10BaseRunner4waitEii"><code class="docutils literal notranslate"><span class="pre">wait()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="class/classvart_1_1_runner.html">Class vart::Runner</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class/classvart_1_1_runner.html#_CPPv4N4vart6RunnerE"><code class="docutils literal notranslate"><span class="pre">vart::Runner</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_runner.html#_CPPv4N4vart6Runner13execute_asyncERKNSt6vectorIP12TensorBufferEERKNSt6vectorIP12TensorBufferEE"><code class="docutils literal notranslate"><span class="pre">execute_async()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_runner.html#_CPPv4N4vart6Runner4waitEii"><code class="docutils literal notranslate"><span class="pre">wait()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_runner.html#_CPPv4N4vart6Runner17get_tensor_formatEv"><code class="docutils literal notranslate"><span class="pre">get_tensor_format()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_runner.html#_CPPv4N4vart6Runner17get_input_tensorsEv"><code class="docutils literal notranslate"><span class="pre">get_input_tensors()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_runner.html#_CPPv4N4vart6Runner18get_output_tensorsEv"><code class="docutils literal notranslate"><span class="pre">get_output_tensors()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_runner.html#_CPPv4N4vart6Runner13execute_asyncE9InputType10OutputType"><code class="docutils literal notranslate"><span class="pre">execute_async()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_runner.html#_CPPv4N4vart6Runner13create_runnerEPKN3xir8SubgraphERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">create_runner()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_runner.html#_CPPv4N4vart6Runner24create_runner_with_attrsEPKN3xir8SubgraphEPN3xir5AttrsE"><code class="docutils literal notranslate"><span class="pre">create_runner_with_attrs()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="class/classvart_1_1_runner_ext.html">Class vart::RunnerExt</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class/classvart_1_1_runner_ext.html#_CPPv4N4vart9RunnerExtE"><code class="docutils literal notranslate"><span class="pre">vart::RunnerExt</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_runner_ext.html#_CPPv4N4vart9RunnerExt10get_inputsEv"><code class="docutils literal notranslate"><span class="pre">get_inputs()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_runner_ext.html#_CPPv4N4vart9RunnerExt11get_outputsEv"><code class="docutils literal notranslate"><span class="pre">get_outputs()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_runner_ext.html#_CPPv4N4vart9RunnerExt13execute_asyncERKNSt6vectorIP12TensorBufferEERKNSt6vectorIP12TensorBufferEE"><code class="docutils literal notranslate"><span class="pre">execute_async()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_runner_ext.html#_CPPv4N4vart9RunnerExt13execute_asyncE9InputType10OutputType"><code class="docutils literal notranslate"><span class="pre">execute_async()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_runner_ext.html#_CPPv4N4vart9RunnerExt4waitEii"><code class="docutils literal notranslate"><span class="pre">wait()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_runner_ext.html#_CPPv4N4vart9RunnerExt17get_tensor_formatEv"><code class="docutils literal notranslate"><span class="pre">get_tensor_format()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_runner_ext.html#_CPPv4N4vart9RunnerExt17get_input_tensorsEv"><code class="docutils literal notranslate"><span class="pre">get_input_tensors()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_runner_ext.html#_CPPv4N4vart9RunnerExt18get_output_tensorsEv"><code class="docutils literal notranslate"><span class="pre">get_output_tensors()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_runner_ext.html#_CPPv4N4vart9RunnerExt13create_runnerEPKN3xir8SubgraphEPN3xir5AttrsE"><code class="docutils literal notranslate"><span class="pre">create_runner()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_runner_ext.html#_CPPv4N4vart9RunnerExt13create_runnerEPKN3xir8SubgraphERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">create_runner()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_runner_ext.html#_CPPv4N4vart9RunnerExt24create_runner_with_attrsEPKN3xir8SubgraphEPN3xir5AttrsE"><code class="docutils literal notranslate"><span class="pre">create_runner_with_attrs()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="class/classvart_1_1_tensor_buffer.html">Class vart::TensorBuffer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class/classvart_1_1_tensor_buffer.html#_CPPv4N4vart12TensorBufferE"><code class="docutils literal notranslate"><span class="pre">vart::TensorBuffer</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_tensor_buffer.html#_CPPv4N4vart12TensorBuffer4dataEKNSt6vectorINSt7int32_tEEE"><code class="docutils literal notranslate"><span class="pre">data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_tensor_buffer.html#_CPPv4NK4vart12TensorBuffer12get_locationEv"><code class="docutils literal notranslate"><span class="pre">get_location()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_tensor_buffer.html#_CPPv4N4vart12TensorBuffer8data_phyEKNSt6vectorINSt7int32_tEEE"><code class="docutils literal notranslate"><span class="pre">data_phy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_tensor_buffer.html#_CPPv4N4vart12TensorBuffer13sync_for_readE8uint64_t6size_t"><code class="docutils literal notranslate"><span class="pre">sync_for_read()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_tensor_buffer.html#_CPPv4N4vart12TensorBuffer14sync_for_writeE8uint64_t6size_t"><code class="docutils literal notranslate"><span class="pre">sync_for_write()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_tensor_buffer.html#_CPPv4N4vart12TensorBuffer14copy_from_hostE6size_tPKv6size_t6size_t"><code class="docutils literal notranslate"><span class="pre">copy_from_host()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_tensor_buffer.html#_CPPv4N4vart12TensorBuffer12copy_to_hostE6size_tPv6size_t6size_t"><code class="docutils literal notranslate"><span class="pre">copy_to_host()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_tensor_buffer.html#_CPPv4NK4vart12TensorBuffer10get_tensorEv"><code class="docutils literal notranslate"><span class="pre">get_tensor()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_tensor_buffer.html#_CPPv4NK4vart12TensorBuffer9to_stringEv"><code class="docutils literal notranslate"><span class="pre">to_string()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_tensor_buffer.html#_CPPv4N4vart12TensorBuffer9to_stringE10location_t"><code class="docutils literal notranslate"><span class="pre">to_string()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_tensor_buffer.html#_CPPv4N4vart12TensorBuffer18copy_tensor_bufferEPN4vart12TensorBufferEPN4vart12TensorBufferE"><code class="docutils literal notranslate"><span class="pre">copy_tensor_buffer()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_tensor_buffer.html#_CPPv4N4vart12TensorBuffer35create_unowned_device_tensor_bufferEPKN3xir6TensorEA_8uint64_t6size_t"><code class="docutils literal notranslate"><span class="pre">create_unowned_device_tensor_buffer()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="class/classvart_1_1_tensor_buffer_ext.html">Class vart::TensorBufferExt</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class/classvart_1_1_tensor_buffer_ext.html#_CPPv4N4vart15TensorBufferExtE"><code class="docutils literal notranslate"><span class="pre">vart::TensorBufferExt</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_tensor_buffer_ext.html#_CPPv4NK4vart15TensorBufferExt9to_stringEv"><code class="docutils literal notranslate"><span class="pre">to_string()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_tensor_buffer_ext.html#_CPPv4N4vart15TensorBufferExt4dataEKNSt6vectorINSt7int32_tEEE"><code class="docutils literal notranslate"><span class="pre">data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_tensor_buffer_ext.html#_CPPv4NK4vart15TensorBufferExt12get_locationEv"><code class="docutils literal notranslate"><span class="pre">get_location()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_tensor_buffer_ext.html#_CPPv4N4vart15TensorBufferExt8data_phyEKNSt6vectorINSt7int32_tEEE"><code class="docutils literal notranslate"><span class="pre">data_phy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_tensor_buffer_ext.html#_CPPv4N4vart15TensorBufferExt13sync_for_readE8uint64_t6size_t"><code class="docutils literal notranslate"><span class="pre">sync_for_read()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_tensor_buffer_ext.html#_CPPv4N4vart15TensorBufferExt14sync_for_writeE8uint64_t6size_t"><code class="docutils literal notranslate"><span class="pre">sync_for_write()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_tensor_buffer_ext.html#_CPPv4N4vart15TensorBufferExt14copy_from_hostE6size_tPKv6size_t6size_t"><code class="docutils literal notranslate"><span class="pre">copy_from_host()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_tensor_buffer_ext.html#_CPPv4N4vart15TensorBufferExt12copy_to_hostE6size_tPv6size_t6size_t"><code class="docutils literal notranslate"><span class="pre">copy_to_host()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_tensor_buffer_ext.html#_CPPv4NK4vart15TensorBufferExt10get_tensorEv"><code class="docutils literal notranslate"><span class="pre">get_tensor()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_tensor_buffer_ext.html#_CPPv4N4vart15TensorBufferExt9to_stringE10location_t"><code class="docutils literal notranslate"><span class="pre">to_string()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_tensor_buffer_ext.html#_CPPv4N4vart15TensorBufferExt18copy_tensor_bufferEPN4vart12TensorBufferEPN4vart12TensorBufferE"><code class="docutils literal notranslate"><span class="pre">copy_tensor_buffer()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="class/classvart_1_1_tensor_buffer_ext.html#_CPPv4N4vart15TensorBufferExt35create_unowned_device_tensor_bufferEPKN3xir6TensorEA_8uint64_t6size_t"><code class="docutils literal notranslate"><span class="pre">create_unowned_device_tensor_buffer()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </section>
@@ -169,7 +236,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022-2023, Advanced Micro Devices, Inc.
-      <span class="lastupdated">Last updated on July 19, 2023.
+      <span class="lastupdated">Last updated on August 21, 2025.
       </span></p>
   </div>
 

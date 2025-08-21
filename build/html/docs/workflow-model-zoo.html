@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
@@ -27,11 +27,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
+        <script src="../_static/documentation_options.js?v=490739ad"></script>
+        <script src="../_static/doctools.js?v=9bcbadda"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -49,7 +47,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search">
             <a href="../index.html" class="icon icon-home"> Vitis™ AI
-            <img src="../_static/xilinx-header-logo.svg" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 3.5
@@ -154,14 +151,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
            <div itemprop="articleBody">
              
   <section id="vitis-ai-model-zoo">
-<span id="workflow-model-zoo"></span><h1>Vitis AI Model Zoo<a class="headerlink" href="#vitis-ai-model-zoo" title="Permalink to this heading">¶</a></h1>
+<span id="workflow-model-zoo"></span><h1>Vitis AI Model Zoo<a class="headerlink" href="#vitis-ai-model-zoo" title="Link to this heading">¶</a></h1>
 <p>The Vitis™ AI Model Zoo, incorporated into the Vitis AI repository, includes optimized deep learning models to speed up the deployment of deep learning inference on AMD platforms. These models cover different applications, including but not limited to ADAS/AD, medical, video surveillance, robotics, data center, and so on. You can get started with these free pre-trained models to enjoy the benefits of deep learning acceleration.</p>
 <section id="vitis-ai-copyleft-model-zoo">
-<h2>Vitis AI Copyleft Model Zoo<a class="headerlink" href="#vitis-ai-copyleft-model-zoo" title="Permalink to this heading">¶</a></h2>
+<h2>Vitis AI Copyleft Model Zoo<a class="headerlink" href="#vitis-ai-copyleft-model-zoo" title="Link to this heading">¶</a></h2>
 <p>Many open-source models are released under reciprocal license terms which are not compatible with Apache 2.0. In order to faciliate the support of such models, and clearly distinguish the source license for each, we have created a separate Model Zoo repository.  Users will find the training code for these models (for example, YOLOv7) in the <a class="reference external" href="https://github.com/Xilinx/Vitis-AI-Copyleft-Model-Zoo">Vitis AI Copyleft Model Zoo</a>.  All other models are found in the primary Vitis AI repository.</p>
 </section>
 <section id="model-zoo-details-and-performance">
-<h2>Model Zoo Details and Performance<a class="headerlink" href="#model-zoo-details-and-performance" title="Permalink to this heading">¶</a></h2>
+<h2>Model Zoo Details and Performance<a class="headerlink" href="#model-zoo-details-and-performance" title="Link to this heading">¶</a></h2>
 <p>All the models in the Model Zoo are deployed on AMD adaptable hardware with <a class="reference external" href="https://github.com/Xilinx/Vitis-AI">Vitis AI</a> and the <a class="reference external" href="https://github.com/Xilinx/Vitis-AI/tree/v3.5/examples/vai_library">Vitis AI Library</a>. The performance benchmark data includes end-to-end throughput and latency for each model, targeting various boards with varied DPU configurations.</p>
 <p>To make the job of using the Model Zoo a little easier, we have provided a downloadable spreadsheet and an online table that incorporates key data about the Model Zoo models. The spreadsheet and tables include comprehensive information about all models, including links to the original papers and datasets, source framework, input size, computational cost (GOPs), and float and quantized accuracy. <strong>You can download the spreadsheet</strong> <a class="reference download internal" download="" href="../_downloads/ff9554ff9ff6240811c20ede15113dbd/ModelZoo_Github.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">here</span></code></a>.</p>
 <a href="reference/ModelZoo_Github_web.htm"><h4>Click here to view the Model Zoo Details & Performance table online.</h4></a><br><br><div class="admonition note">
@@ -178,10 +175,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 </section>
 <section id="model-file-nomenclature">
-<h2>Model File Nomenclature<a class="headerlink" href="#model-file-nomenclature" title="Permalink to this heading">¶</a></h2>
+<h2>Model File Nomenclature<a class="headerlink" href="#model-file-nomenclature" title="Link to this heading">¶</a></h2>
 <p>When downloading and using models from the Model Zoo, it will be important to you to understand the nomenclature used for each file.</p>
 <section id="model-file-nomenclature-decoder">
-<h3>Model File Nomenclature Decoder<a class="headerlink" href="#model-file-nomenclature-decoder" title="Permalink to this heading">¶</a></h3>
+<h3>Model File Nomenclature Decoder<a class="headerlink" href="#model-file-nomenclature-decoder" title="Link to this heading">¶</a></h3>
 <p>AMD Model Zoo file names assume the format: <cite>F_M_(D)_H_W_(P)_C_V</cite>, where:</p>
 <ul class="simple">
 <li><p><cite>F</cite> specifies the training framework: <cite>tf</cite> is TensorFlow 1.x, <cite>tf2</cite> is TensorFlow 2.x, <cite>pt</cite> is PyTorch</p></li>
@@ -197,14 +194,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </section>
 </section>
 <section id="model-download">
-<h2>Model Download<a class="headerlink" href="#model-download" title="Permalink to this heading">¶</a></h2>
+<h2>Model Download<a class="headerlink" href="#model-download" title="Link to this heading">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Each model is associated with a <cite>.yaml</cite> file encapsulating the download link and MD5 checksum for a tar.gz file. These YAML files are in the Vitis AI repository <code class="docutils literal notranslate"><span class="pre">/model_zoo/model-list</span></code>. There is a separate tar.gz file for each specific target platform. A simple way to download an individual model is to use the URLs provided in the .yaml file. This can be useful if you want to download and inspect the model outside a Python environment.</p>
 </div>
 <p>The download package includes the pre-compiled, pre-trained model, which you can leverage as a base reference (layer types, activation types, layer ordering) for your implementation or directly deploy that model on an AMD target.</p>
 <section id="automated-download-script">
-<h3>Automated Download Script<a class="headerlink" href="#automated-download-script" title="Permalink to this heading">¶</a></h3>
+<h3>Automated Download Script<a class="headerlink" href="#automated-download-script" title="Link to this heading">¶</a></h3>
 <p>The Vitis AI Model Zoo repository provides a Python <code class="docutils literal notranslate"><span class="pre">/model_zoo/downloader.py</span></code> that quickly downloads specific models.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -245,10 +242,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </ol>
 </section>
 <section id="model-directory-structure">
-<h3>Model Directory Structure<a class="headerlink" href="#model-directory-structure" title="Permalink to this heading">¶</a></h3>
+<h3>Model Directory Structure<a class="headerlink" href="#model-directory-structure" title="Link to this heading">¶</a></h3>
 <p>Once you have downloaded one or more models, you can extract the model archive into your selected workspace.</p>
 <section id="tensorflow-model-directory-structure">
-<h4>Tensorflow Model Directory Structure<a class="headerlink" href="#tensorflow-model-directory-structure" title="Permalink to this heading">¶</a></h4>
+<h4>Tensorflow Model Directory Structure<a class="headerlink" href="#tensorflow-model-directory-structure" title="Link to this heading">¶</a></h4>
 <p>TensorFlow models have the following directory structure:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>├── code                            # Contains test code that can execute the model on the target and showcase model performance.
 │
@@ -269,7 +266,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 </section>
 <section id="pytorch-model-directory-structure">
-<h4>Pytorch Model Directory Structure<a class="headerlink" href="#pytorch-model-directory-structure" title="Permalink to this heading">¶</a></h4>
+<h4>Pytorch Model Directory Structure<a class="headerlink" href="#pytorch-model-directory-structure" title="Link to this heading">¶</a></h4>
 <p>PyTorch models have the following directory structure:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>├── code                            # Contains test and training code.
 │
@@ -309,7 +306,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </section>
 </section>
 <section id="model-retraining">
-<h2>Model Retraining<a class="headerlink" href="#model-retraining" title="Permalink to this heading">¶</a></h2>
+<h2>Model Retraining<a class="headerlink" href="#model-retraining" title="Link to this heading">¶</a></h2>
 <p>AMD provides the original floating point model and training scripts for each model in the Model Zoo.  Review the <cite>.yaml</cite> file for your target model to locate the download link for the “GPU” model.</p>
 <p>Here is an example:</p>
 <blockquote>
@@ -346,7 +343,7 @@ files:
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022-2023, Advanced Micro Devices, Inc.
-      <span class="lastupdated">Last updated on July 19, 2023.
+      <span class="lastupdated">Last updated on August 21, 2025.
       </span></p>
   </div>
 

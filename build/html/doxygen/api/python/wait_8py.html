@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
@@ -27,11 +27,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/documentation_options.js?v=490739ad"></script>
+        <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -49,7 +47,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search">
             <a href="../../../index.html" class="icon icon-home"> Vitis™ AI
-            <img src="../../../_static/xilinx-header-logo.svg" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 3.5
@@ -94,7 +91,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l2"><a class="reference internal" href="get__outputs_8py.html">get_outputs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="runner__example_8py.html">runner_example</a></li>
 <li class="toctree-l2"><a class="reference internal" href="runnerext__example_8py.html">runnerext_example</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">wait</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">wait</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#wait"><code class="docutils literal notranslate"><span class="pre">wait()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id0"><code class="docutils literal notranslate"><span class="pre">wait</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#wait.wait"><code class="docutils literal notranslate"><span class="pre">wait()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -149,18 +153,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
            <div itemprop="articleBody">
              
   <section id="file-wait-py">
-<h1>File wait.py<a class="headerlink" href="#file-wait-py" title="Permalink to this heading">¶</a></h1>
+<h1>File wait.py<a class="headerlink" href="#file-wait-py" title="Link to this heading">¶</a></h1>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="wait">
-<span class="target" id="namespacewait_1ab4220d0d78dc393e22655b60ac4b74f4"></span><span class="sig-name descname"><span class="pre">wait</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">jobid_time</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#wait" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="namespacewait_1a9dd979228e0a14a50ef3e2ee0206a5f6"></span><span class="sig-name descname"><span class="pre">wait</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">jobid_time</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#wait" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
 <dl class="py class">
 <dt class="sig sig-object py" id="id0">
-<span class="target" id="namespacewait"></span><em class="property"><span class="pre">module</span> </em><span class="sig-name descname"><span class="pre">wait</span></span><a class="headerlink" href="#id0" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="namespacewait"></span><em class="property"><span class="pre">module</span> </em><span class="sig-name descname"><span class="pre">wait</span></span><a class="headerlink" href="#id0" title="Link to this definition">¶</a></dt>
 <dd><p>Waits for the end of DPU processing. </p>
 <p>modes:<ol class="loweralpha simple">
 <li><p>Blocking wait for specific ID.</p></li>
@@ -181,7 +185,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="wait.wait">
-<span class="target" id="namespacewait_1ab4220d0d78dc393e22655b60ac4b74f4"></span><span class="sig-name descname"><span class="pre">wait</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">jobid_time</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#wait.wait" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="namespacewait_1a9dd979228e0a14a50ef3e2ee0206a5f6"></span><span class="sig-name descname"><span class="pre">wait</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">jobid_time</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#wait.wait" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
@@ -203,7 +207,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022-2023, Advanced Micro Devices, Inc.
-      <span class="lastupdated">Last updated on July 19, 2023.
+      <span class="lastupdated">Last updated on August 21, 2025.
       </span></p>
   </div>
 
