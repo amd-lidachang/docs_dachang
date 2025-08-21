@@ -1,11 +1,12 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
-  <compounddef id="namespacexir" kind="namespace" language="C++">
-    <compoundname>xir</compoundname>
+  <compounddef id="dir_9f17a270f6be0006b5ed9b175012fba0" kind="dir">
+    <compoundname>vitis-ai-staging</compoundname>
+    <innerdir refid="dir_5a24433df37f148ba1fbae786abe205c">src</innerdir>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/scratch/dachang/vitis-ai-staging/src/vai_runtime/vart/runner/include/vart/tensor_buffer.hpp" line="25" column="1"/>
+    <location file="/scratch/dachang/vitis-ai-staging/"/>
   </compounddef>
 </doxygen>
