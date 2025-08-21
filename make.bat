@@ -10,6 +10,27 @@ if "%SPHINXBUILD%" == "" (
 set SOURCEDIR=source
 set BUILDDIR=build
 
+if "%1" == "" goto help
+
+if "%1" == "github" (
+    echo.Build Doxygen docs
+	cd %SOURCEDIR%/doxygen
+	doxygen Doxyfile
+	python C:/users/quentonh/anaconda3/envs/sphinx_builder/lib/site-packages/breathe/apidoc.py -o ./api ./xml
+	cd ../..
+	echo.Build HTML docs
+	%SPHINXBUILD% -M html %SOURCEDIR% %BUILDDIR% %SPHINXOPTS%
+    REM python csv2table %SOURCEDIR%\docs\reference\ModelZoo_Github.csv %SOURCEDIR%\docs\reference\ModelZoo_Github_web.html
+	copy %SOURCEDIR%\docs\reference\ModelZoo_Github.htm %BUILDDIR%\html\docs\reference\ModelZoo_Github_web.htm
+	copy %SOURCEDIR%\docs\404.html %BUILDDIR%\html\404.html
+	rm ../docs -r
+	robocopy /MIR %BUILDDIR%/html ../docs /E > nul
+	robocopy /MIR %SOURCEDIR%/docs/reference/images ../docs/_images /E > nul
+    echo.Generated files copied to ../docs
+    goto end
+)
+
+
 %SPHINXBUILD% >NUL 2>NUL
 if errorlevel 9009 (
 	echo.
