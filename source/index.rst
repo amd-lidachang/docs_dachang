@@ -20,7 +20,7 @@ Vitis AI
 
 AMD Vitis™ AI is an integrated development environment that can be leveraged to accelerate AI inference on AMD platforms. This toolchain provides optimized IP, tools, libraries, models, as well as resources, such as example designs and tutorials that aid the user throughout the development process.  It is designed with high efficiency and ease-of-use in mind, unleashing the full potential of AI acceleration on AMD Adaptable SoCs and Alveo Data Center accelerator cards.
 
-.. figure:: reference/images/VAI_3rd_party_ONNXRuntime_Edge.PNG
+.. figure:: docs/reference/images/VAI_IDE.PNG
    :width: 1300
 
    Vitis AI Integrated Development Environment Block Diagram
