@@ -113,7 +113,7 @@ The :ref:`Vitis AI Profiler <vitis-ai-profiler>` profiles and visualizes AI appl
    :caption: Setup and Install
    :hidden:
    
-   Release Notes <docs/reference/release_notes_3.0>
+   Release Notes <docs/reference/release_notes_4.0>
    System Requirements <docs/reference/system_requirements>
    Host Install Instructions <docs/install/install>
 
@@ -123,7 +123,6 @@ The :ref:`Vitis AI Profiler <vitis-ai-profiler>` profiles and visualizes AI appl
    :hidden:
 
    Zynq™ Ultrascale+™ <docs/quickstart/mpsoc>
-   Versal™ VCK5000 Development Card <docs/quickstart/vck5000>
    Versal™ AI Core VCK190 <docs/quickstart/vck190>
  
 

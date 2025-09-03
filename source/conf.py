@@ -28,13 +28,13 @@ sys.path.insert(0, os.path.abspath('docs'))
 # Enter project name in next line, replacing example text
 project = 'Vitis™ AI'
 # Enter copyright date range in next line. All years that your project has been released should be included.
-copyright = '2022-2023, Advanced Micro Devices, Inc'
+copyright = '2024-2025, Advanced Micro Devices, Inc'
 author = 'Advanced Micro Devices, Inc'
 
 # The short X.Y version
-version = '3.0'
+version = '4.0'
 # The full version, including alpha/beta/rc tags
-release = '3.0'
+release = '4.0'
 
 # Configure HTML pages build date to today's date
 today = date.today()
