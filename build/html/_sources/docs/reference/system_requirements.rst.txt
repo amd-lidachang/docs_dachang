@@ -6,11 +6,11 @@ The following table lists Vitis |trade| AI developer workstation system requirem
 +------------------------------------------------------------------------+--------------------------------------------------------------------------+
 | Component                                                              | Requirement                                                              |
 +========================================================================+==========================================================================+
-| ROCm GPU (GPU is optional but strongly recommended for quantization)   | AMD ROCm GPUs supporting ROCm v5.5, requires Ubuntu 20.04                |
+| ROCm GPU (GPU is optional but strongly recommended for quantization)   | AMD ROCm GPUs supporting ROCm v5.4.1, requires Ubuntu 20.04              |
 +------------------------------------------------------------------------+--------------------------------------------------------------------------+
-| CUDA GPU (GPU is optional but strongly recommended for quantization)   | NVIDIA GPUs supporting CUDA 11.8 or higher, (eg: NVIDIA P100, V100, A100)|
+| CUDA GPU (GPU is optional but strongly recommended for quantization)   | NVIDIA GPUs supporting CUDA 11.3 or higher, (eg: NVIDIA P100, V100, A100)|
 +------------------------------------------------------------------------+--------------------------------------------------------------------------+
-| CUDA Driver                                                            | NVIDIA-520.61.05  or higher for CUDA 11.8                                |
+| CUDA Driver                                                            | NVIDIA-465.19.01 or higher for CUDA 11.3                                 |
 +------------------------------------------------------------------------+--------------------------------------------------------------------------+
 | Docker Version                                                         | 19.03 or higher, nvidia-docker2                                          |
 +------------------------------------------------------------------------+--------------------------------------------------------------------------+

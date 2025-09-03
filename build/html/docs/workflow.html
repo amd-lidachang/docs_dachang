@@ -19,7 +19,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-5RHQV7');</script>
 <!-- End Google Tag Manager -->
-  <title>Overview &mdash; Vitis™ AI 3.5 documentation</title>
+  <title>Overview &mdash; Vitis™ AI 3.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/_static/custom.css" type="text/css" />
@@ -36,7 +36,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="DPU IP Details and System Integration" href="workflow-system-integration.html" />
-    <link rel="prev" title="Quick Start Guide for Alveo V70" href="quickstart/v70.html" /> 
+    <link rel="prev" title="Quick Start Guide for VCK190" href="quickstart/vck190.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -52,7 +52,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <img src="../_static/xilinx-header-logo.svg" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                3.5
+                3.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -64,14 +64,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Setup and Install</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="reference/release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/release_notes_3.0.html">Release Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reference/system_requirements.html">System Requirements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install/install.html">Host Install Instructions</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Quick Start Guides</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="quickstart/vek280.html">Versal™ AI Edge VEK280</a></li>
-<li class="toctree-l1"><a class="reference internal" href="quickstart/v70.html">Alveo™ V70</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart/mpsoc.html">Zynq™ Ultrascale+™</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart/vck5000.html">Versal™ VCK5000 Development Card</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart/vck190.html">Versal™ AI Core VCK190</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Workflow and Components</span></p>
 <ul class="current">
@@ -85,11 +86,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l1"><a class="reference internal" href="workflow-model-development.html">Developing a Model for Vitis AI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="workflow-model-deployment.html">Deploying a Model with Vitis AI</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Runtime API Documentation</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../doxygen/api/classlist.html">C++ API Class</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../doxygen/api/pythonlist.html">Python APIs</a></li>
-</ul>
 <p class="caption" role="heading"><span class="caption-text">Additional Information</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="reference/release_documentation.html">Vitis™ AI User Guides &amp; IP Product Guides</a></li>
@@ -102,7 +98,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p class="caption" role="heading"><span class="caption-text">Resources and Support</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="reference/additional_resources.html">Technical Support</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reference/additional_resources.html#id1">Additional Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/additional_resources.html#additional-resources">Additional Resources</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Related AMD Solutions</span></p>
 <ul>
@@ -161,7 +157,7 @@ the developer to master the integration of the DPU IP. This path provides an exc
 </section>
 <section id="supported-evaluation-targets">
 <h2>Supported Evaluation Targets<a class="headerlink" href="#supported-evaluation-targets" title="Permalink to this heading">¶</a></h2>
-<p>Vitis™ AI 3.5 supports the following targets for evaluation.</p>
+<p>Vitis™ AI 3.0 supports the following targets for evaluation.</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 30%" />
@@ -173,25 +169,24 @@ the developer to master the integration of the DPU IP. This path provides an exc
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>Versal AI Edge</p></td>
-<td><p><a class="reference external" href="https://www.xilinx.com/vek280.html">VEK280</a></p></td>
+<tr class="row-even"><td><p>Versal Embedded</p></td>
+<td><p><a class="reference external" href="https://www.xilinx.com/vck190">VCK190</a> / <a class="reference external" href="https://www.xilinx.com/vck5000">VCK5000</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Versal AI Edge</p></td>
+<td><p><a class="reference external" href="https://www.xilinx.com/member/vitis-ai-vek280.html">VEK280</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Zynq Ultrascale+ Embedded</p></td>
+<td><p><a class="reference external" href="https://www.xilinx.com/zcu102">ZCU102</a> / <a class="reference external" href="https://www.xilinx.com/zcu104">ZCU104</a> / <a class="reference external" href="https://www.xilinx.com/kria">Kria K26 SOM</a></p></td>
 </tr>
 <tr class="row-odd"><td><p>Alveo Data Center Acceleration Cards</p></td>
-<td><p><a class="reference external" href="https://www.xilinx.com/applications/data-center/v70.html">V70</a></p></td>
+<td><p><a class="reference external" href="https://www.xilinx.com/member/v70.html#vitis_ai">V70</a></p></td>
 </tr>
 </tbody>
 </table>
-<p>Vitis™ AI 3.5 supports Zynq™ Ultrascale+™ and Versal™ AI Core architectures, however the IP for these devices is now considered mature and will not be updated with each release. Users should understand that we will continue to support these targets into the future and Vitis AI will update the pre-built board images and reference designs for these architectures with each major release (ie, 4.0).</p>
-<p>For minor releases (x.5), users wishing to leverage these architectures have two choices:</p>
-<ol class="arabic simple">
-<li><p>Leverage Vitis™ AI 3.0 for initial evaluation and development.</p></li>
-<li><p>Build a custom board Petalinux image for their target leveraging the Vitis AI 3.5 runtime and libraries.</p></li>
-</ol>
-<p>Vitis AI support for the <a class="reference external" href="https://www.xilinx.com/VCK5000">VCK5000</a> was discontinued in the 3.5 release.  Please use Vitis AI 3.0 for this target.</p>
-<p>Vitis AI support for the Uxxx Alveo targets was discontinued in the 3.0 release.  Please use Vitis AI 2.5 for those targets.</p>
-<p>When you are ready to start with one of these platforms, you should refer to the Quickstart documentation. Quickstart instructions guide users to download a pre-built board image to launch deployment examples that leverage Vitis AI Model Zoo. This is a crucial first step to becoming familiar with Vitis AI.</p>
+<p>Vitis AI support for the <a class="reference external" href="https://www.xilinx.com/U200">U200 16nm DDR</a>, <a class="reference external" href="https://www.xilinx.com/U250">U250 16 nm DDR</a>, <a class="reference external" href="https://www.xilinx.com/U280">U280 16 nm HBM</a>, <a class="reference external" href="https://www.xilinx.com/U55C">U55C 16 nm HBM</a>, <a class="reference external" href="https://www.xilinx.com/U50">U50 16 nm HBM</a>, and <a class="reference external" href="https://www.xilinx.com/U50LV">U50LV 16 nm HBM</a> has been discontinued. Please leverage a previous release for these targets or contact your local sales team for additional guidance.</p>
+<p>When you are ready to start with one of these pre-built platforms, you should refer to the Quickstart documentation for the respective target. The Quickstart instructions guide users to download a pre-built board image to launch deployment examples that leverage Vitis AI Model Zoo, Vitis AI Library, and Vitis AI Quantizer and Compiler. This is a crucial first step to becoming familiar with Vitis AI.</p>
 <p>In addition, developers with access to suitable available hardware platforms can experience pre-built demonstrations available for download through the <a class="reference external" href="https://www.xilinx.com/developer/products/vitis-ai.html#demos">Vitis AI Developer page</a>. Contact your local FAE to arrange a live demonstration.</p>
-<p>Last but not least, embedded in the Vitis AI Github repo, there is a folder in which we may publish demonstrations from time-to-time. You can access the <a class="reference external" href="https://github.com/Xilinx/Vitis-AI/tree/v3.5/demos">demos here</a>.</p>
+<p>Last but not least, embedded in the Vitis AI Github repo, there is a folder that in which we may publish demonstrations from time-to-time. You can access the <a class="reference external" href="https://github.com/Xilinx/Vitis-AI/tree/3.0/demos">demos here</a>.</p>
 </section>
 </section>
 
@@ -201,7 +196,7 @@ the developer to master the integration of the DPU IP. This path provides an exc
           
 				  
 				  <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="quickstart/v70.html" class="btn btn-neutral float-left" title="Quick Start Guide for Alveo V70" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="quickstart/vck190.html" class="btn btn-neutral float-left" title="Quick Start Guide for VCK190" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="workflow-system-integration.html" class="btn btn-neutral float-right" title="DPU IP Details and System Integration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

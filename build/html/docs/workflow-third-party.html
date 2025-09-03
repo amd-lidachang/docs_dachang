@@ -19,7 +19,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-5RHQV7');</script>
 <!-- End Google Tag Manager -->
-  <title>Third-party Inference Stack Integration &mdash; Vitis™ AI 3.5 documentation</title>
+  <title>Third-party Inference Stack Integration &mdash; Vitis™ AI 3.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/_static/custom.css" type="text/css" />
@@ -52,7 +52,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <img src="../_static/xilinx-header-logo.svg" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                3.5
+                3.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -64,14 +64,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Setup and Install</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="reference/release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/release_notes_3.0.html">Release Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reference/system_requirements.html">System Requirements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install/install.html">Host Install Instructions</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Quick Start Guides</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="quickstart/vek280.html">Versal™ AI Edge VEK280</a></li>
-<li class="toctree-l1"><a class="reference internal" href="quickstart/v70.html">Alveo™ V70</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart/mpsoc.html">Zynq™ Ultrascale+™</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart/vck5000.html">Versal™ VCK5000 Development Card</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart/vck190.html">Versal™ AI Core VCK190</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Workflow and Components</span></p>
 <ul>
@@ -80,11 +81,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l1"><a class="reference internal" href="workflow-model-zoo.html">Vitis™ AI Model Zoo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="workflow-model-development.html">Developing a Model for Vitis AI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="workflow-model-deployment.html">Deploying a Model with Vitis AI</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Runtime API Documentation</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../doxygen/api/classlist.html">C++ API Class</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../doxygen/api/pythonlist.html">Python APIs</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Additional Information</span></p>
 <ul class="current">
@@ -103,7 +99,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p class="caption" role="heading"><span class="caption-text">Resources and Support</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="reference/additional_resources.html">Technical Support</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reference/additional_resources.html#id1">Additional Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/additional_resources.html#additional-resources">Additional Resources</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Related AMD Solutions</span></p>
 <ul>
@@ -158,25 +154,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <section id="onnx-runtime">
 <h2>ONNX Runtime<a class="headerlink" href="#onnx-runtime" title="Permalink to this heading">¶</a></h2>
 <p><a class="reference external" href="https://onnxruntime.ai/">ONNX Runtime</a> was devised as a cross-platform inference deployment runtime for ONNX models. ONNX Runtime provides the benefit of runtime interpretation of models represented in the ONNX intermediate representation (IR) format.</p>
-<p>The <a class="reference external" href="https://onnxruntime.ai/docs/execution-providers/">ONNX Runtime Execution Provider</a> framework enables the integration of customized tensor accelerator cores from any “execution provider.” Such “execution providers” are typically tensor acceleration IP blocks integrated into an SoC by the semiconductor vendor. Specific subgraphs or operations within the ONNX graph can be offloaded to that core based on the advertised capabilities of that execution provider. The ability of a given accelerator to offload operations is presented as a listing of capabilities to the ONNX Runtime.</p>
-<p>Starting with the release of Vitis AI 3.0, we have enhanced Vitis AI support for the ONNX Runtime.  The Vitis AI Quantizer can now be leveraged to export a quantized ONNX model to the runtime where subgraphs suitable for deployment on the DPU are compiled.  Remaining subgraphs are then deployed by ONNX Runtime, leveraging the AMD Versal™ and Zynq™ UltraScale+™ MPSoC APUs, or the Ryzen™ AI AMD64 cores to deploy these subgraphs.  The underlying software infrastructure is named VOE or “<strong>V</strong> itis AI <strong>O</strong> NNX Runtime <strong>E</strong> ngine”.  Users should refer to the section “Programming with VOE” in <a class="reference internal" href="reference/release_documentation.html"><span class="doc">UG1414</span></a> for additional information on this powerful workflow.</p>
+<p>The <a class="reference external" href="https://onnxruntime.ai/docs/execution-providers/">ONNX Runtime Execution Provider</a> framework enables the integration of proprietary or customized tensor accelerator cores from any “execution provider.” Such “execution providers” are typically tensor acceleration IP blocks integrated into an SoC by the semiconductor vendor. Specific subgraphs or operations within the ONNX graph can be offloaded to that core based on the advertised capabilities of that execution provider. The ability of a given accelerator to offload operations is presented as a listing of capabilities to the ONNX Runtime.</p>
+<p>Starting with the release of Vitis AI 3.0, we have enhanced Vitis AI support for the ONNX Runtime.  The Vitis AI Quantizer can now be leveraged to export a quantized ONNX model to the runtime where subgraphs suitable for deployment on the DPU are compiled.  Remaining subgraphs are then deployed by ONNX Runtime, leveraging the AMD Versal™ and Zynq™ UltraScale+™ MPSoC APUs, or the AMD64 (or x64) host processor (Alveo™ targets) to deploy these subgraphs.  The underlying software infrastructure is named VOE or “<strong>V</strong> itis AI <strong>O</strong> NNX Runtime <strong>E</strong> ngine”.  Users should refer to the section “Programming with VOE” in <a class="reference internal" href="reference/release_documentation.html"><span class="doc">UG1414</span></a> for additional information on this powerful workflow.</p>
 <figure class="align-default" id="id2">
 <a class="reference internal image-reference" href="../_images/VAI_3rd_party_ONNXRuntime_Edge.PNG"><img alt="../_images/VAI_3rd_party_ONNXRuntime_Edge.PNG" src="../_images/VAI_3rd_party_ONNXRuntime_Edge.PNG" style="width: 1300px;" /></a>
 <figcaption>
-<p><span class="caption-text">Vitis-AI Integration With ONNX Runtime (Edge &amp; Client)</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Vitis-AI Integration With ONNX Runtime (Edge)</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>For Ryzen™ AI targets which leverage the AMD XDNA™ adaptable AI architecture, the Vitis AI Execution Provider is published <a class="reference external" href="https://onnxruntime.ai/docs/execution-providers/community-maintained/Vitis-AI-ExecutionProvider.html">here</a>.</p>
+<figure class="align-default" id="id3">
+<a class="reference internal image-reference" href="../_images/VAI_3rd_party_ONNXRuntime.PNG"><img alt="../_images/VAI_3rd_party_ONNXRuntime.PNG" src="../_images/VAI_3rd_party_ONNXRuntime.PNG" style="width: 1300px;" /></a>
+<figcaption>
+<p><span class="caption-text">Vitis-AI Integration With ONNX Runtime (Data Center)</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>As a reference, for AMD adaptable Data Center targets, Vitis AI Execution Provider support was also previously published as a <a class="reference external" href="https://github.com/Xilinx/Vitis-AI/tree/3.0/third_party/onnxruntime">workflow reference</a>.  The details of the Vitis AI Execution Provider used in this previous release can be found <a class="reference external" href="https://onnxruntime.ai/docs/execution-providers/community-maintained/Vitis-AI-ExecutionProvider.html">here</a>.  Our expectation is that the VOE workflow will supercede this historic workflow for most use cases.</p>
 </section>
 <section id="tensorflow-lite">
 <h2>TensorFlow Lite<a class="headerlink" href="#tensorflow-lite" title="Permalink to this heading">¶</a></h2>
 <p>TensorFlow Lite has been a preferred inference solution for TensorFlow users in the embedded space for many years. TensorFlow Lite provides support for embedded ARM processors, as well as NEON tensor acceleration. TensorFlow Lite provides the benefit of runtime interpretation of models trained in TensorFlow Lite, implying that no compilation is required to execute the model on target. This has made TensorFlow Lite a convenient solution for embedded and mobile MCU targets which did not incorporate purpose-built tensor acceleration cores.</p>
 <p>With the addition of <a class="reference external" href="https://www.tensorflow.org/lite/performance/delegates">TensorFlow Delegates</a>, it became possible for semiconductor vendors with purpose-built tensor accelerators to integrate support into the TensorFlow Lite framework. Certain operations can be offloaded (delegated) to these specialized accelerators, repositioning TensorFlow Lite runtime interpretation as a useful workflow in the high-performance space.</p>
-<p>Vitis AI Delegate support is integrated as an <a class="reference external" href="https://github.com/Xilinx/Vitis-AI/tree/v3.0/third_party/tflite">experimental flow</a> in recent releases.</p>
-<figure class="align-default" id="id3">
+<p>Vitis AI Delegate support is integrated as an <a class="reference external" href="https://github.com/Xilinx/Vitis-AI/tree/3.0/third_party/tflite">experimental flow</a> in recent releases.</p>
+<figure class="align-default" id="id4">
 <a class="reference internal image-reference" href="../_images/VAI_3rd_party_TFLite.PNG"><img alt="../_images/VAI_3rd_party_TFLite.PNG" src="../_images/VAI_3rd_party_TFLite.PNG" style="width: 1300px;" /></a>
 <figcaption>
-<p><span class="caption-text">Vitis-AI Integration With TensorFlow Lite</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Vitis-AI Integration With TensorFlow Lite</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>

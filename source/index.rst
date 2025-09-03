@@ -113,7 +113,7 @@ The :ref:`Vitis AI Profiler <vitis-ai-profiler>` profiles and visualizes AI appl
    :caption: Setup and Install
    :hidden:
    
-   Release Notes <docs/reference/release_notes>
+   Release Notes <docs/reference/release_notes_3.0>
    System Requirements <docs/reference/system_requirements>
    Host Install Instructions <docs/install/install>
 
@@ -122,8 +122,10 @@ The :ref:`Vitis AI Profiler <vitis-ai-profiler>` profiles and visualizes AI appl
    :caption: Quick Start Guides
    :hidden:
 
-   Versal™ AI Edge VEK280 <docs/quickstart/vek280>
-   Alveo™ V70 <docs/quickstart/v70>
+   Zynq™ Ultrascale+™ <docs/quickstart/mpsoc>
+   Versal™ VCK5000 Development Card <docs/quickstart/vck5000>
+   Versal™ AI Core VCK190 <docs/quickstart/vck190>
+ 
 
 
 .. toctree::
@@ -136,14 +138,14 @@ The :ref:`Vitis AI Profiler <vitis-ai-profiler>` profiles and visualizes AI appl
    Vitis™ AI Model Zoo <docs/workflow-model-zoo>
    Developing a Model for Vitis AI <docs/workflow-model-development>
    Deploying a Model with Vitis AI <docs/workflow-model-deployment>
-
+   
 .. toctree::
-   :maxdepth: 6
-   :caption: Runtime API Documentation
+   :maxdepth: 3
+   :caption: Reference Designs
    :hidden:
- 
-   C++ API Class <doxygen/api/classlist>
-   Python APIs <doxygen/api/pythonlist>
+
+..   Zynq MPSoC / Kria K26 <ref_design_docs/README_DPUCZDX8G.md>
+..   Versal / VCK190 <ref_design_docs/README_DPUCVDX8G.md>
 
 .. toctree::
    :maxdepth: 3

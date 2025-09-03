@@ -1,5 +1,3 @@
-.. _additional_resources:
-
 Technical Support
 ==================
 
