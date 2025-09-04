@@ -113,7 +113,7 @@ The :ref:`Vitis AI Profiler <vitis-ai-profiler>` profiles and visualizes AI appl
    :caption: Setup and Install
    :hidden:
    
-   Release Notes <docs/reference/release_notes_4.0>
+   Release Notes <docs/reference/release_notes_5.0>
    System Requirements <docs/reference/system_requirements>
    Host Install Instructions <docs/install/install>
 

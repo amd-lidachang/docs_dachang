@@ -32,9 +32,9 @@ copyright = '2024-2025, Advanced Micro Devices, Inc'
 author = 'Advanced Micro Devices, Inc'
 
 # The short X.Y version
-version = '4.0'
+version = '5.0'
 # The full version, including alpha/beta/rc tags
-release = '4.0'
+release = '5.0'
 
 # Configure HTML pages build date to today's date
 today = date.today()
