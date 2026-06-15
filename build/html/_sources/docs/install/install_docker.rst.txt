@@ -3,6 +3,8 @@
 Installing Docker
 =================
 
+.. include:: /dpu_ip_discontinued_notice.rst
+
 .. important:: In most cases, Developers will want to leverage the CUDA-capable or ROCm Dockers as they support accelerated quantization. Before installing Docker for CUDA-capable GPUs, ensure that you understand the NVIDIA driver, CUDA :doc:`Host System Requirements <../reference/system_requirements>` for Vitis AI.
 
 .. note:: For ROCm distributions, developers should reference `ROCm docker installation <https://github.com/RadeonOpenCompute/ROCm-docker/blob/master/quick-start.md>`__ for further details of docker installation.

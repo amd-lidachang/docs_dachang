@@ -1,6 +1,8 @@
 Technical Support
 ==================
 
+.. include:: /dpu_ip_discontinued_notice.rst
+
 There are multiple avenues available to obtain technical support for Vitis |trade| AI:
 
 	- You can search for answers and post questions on the `Vitis AI Forum <https://support.xilinx.com/s/topic/0TO2E000000YKY9WAO/vitis-ai-ai>`__\.

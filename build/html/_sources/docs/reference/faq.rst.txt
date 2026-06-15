@@ -2,6 +2,8 @@
 Frequently Asked Questions
 ==========================
 
+.. include:: /dpu_ip_discontinued_notice.rst
+
 -  `What is Vitis AI? <#what-is-vitis-ai>`__
 -  `What are the different components of Vitis
    AI? <#what-are-the-different-components-of-vitis-ai>`__

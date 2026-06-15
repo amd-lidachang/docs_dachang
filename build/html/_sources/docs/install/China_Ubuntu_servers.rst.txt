@@ -3,6 +3,8 @@
 Access to Ubuntu Mirrors from within China
 ==========================================
 
+.. include:: /dpu_ip_discontinued_notice.rst
+
 Vitis |trade| AI Docker images leverage Ubuntu 20.04. In your Ubuntu installation, the file **/etc/apt/sources.list** specifies the default server location for Ubuntu packages. For example:
 
 .. code-block::

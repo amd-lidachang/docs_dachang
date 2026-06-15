@@ -3,6 +3,8 @@
 IP and Tool Version Compatibility
 =================================
 
+.. include:: /dpu_ip_discontinued_notice.rst
+
 This page provides information on the compatibility between tools, IP, and Vitis |trade| AI release versions. Ensure that you are using aligned versions of all components.
 
 Current Release

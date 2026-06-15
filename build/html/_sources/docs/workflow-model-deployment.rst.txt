@@ -1,6 +1,8 @@
 Deploying a Model
 =================
 
+.. include:: /dpu_ip_discontinued_notice.rst
+
 Workflow for Deploying a Model
 ------------------------------
 

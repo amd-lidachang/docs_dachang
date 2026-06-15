@@ -1,6 +1,8 @@
 Vitis AI Host (Developer) Machine Requirements
 ===============================================
 
+.. include:: /dpu_ip_discontinued_notice.rst
+
 The following table lists Vitis |trade| AI developer workstation system requirements:
 
 +------------------------------------------------------------------------+--------------------------------------------------------------------------+

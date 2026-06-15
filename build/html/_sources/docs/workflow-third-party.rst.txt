@@ -2,6 +2,8 @@
 Third-party Inference Stack Integration
 ========================================
 
+.. include:: /dpu_ip_discontinued_notice.rst
+
 Vitis |trade| AI provides integration support for TVM, ONNX Runtime, and TensorFlow Lite workflows. The developers can leverage these workflows through the subfolders. A brief description of these workflows is as follows:
 
 TVM

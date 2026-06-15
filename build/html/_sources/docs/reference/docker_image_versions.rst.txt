@@ -3,6 +3,8 @@
 Docker Images
 -------------
 
+.. include:: /dpu_ip_discontinued_notice.rst
+
 Previously released Vitis™ AI CPU Docker images are `available from Docker Hub <https://hub.docker.com/r/xilinx/vitis-ai-cpu/tags?page=1&ordering=last_updated>`__. If you are using a previous version of Vitis AI, you need to use the corresponding Docker version. Here is an example of how you can retrieve an older release:
 
 +---------+--------------------------------------------------------+-------------------------------------------------------------------------------------+-------------------------------------------+

@@ -19,17 +19,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-5RHQV7');</script>
 <!-- End Google Tag Manager -->
-  <title>DPU IP Details and System Integration &mdash; Vitis™ AI 4.0 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/_static/custom.css" type="text/css" />
+  <title>DPU IP Details and System Integration &mdash; Vitis™ AI 5.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=27bbe381" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=8de04d76" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../_static/documentation_options.js?v=9f5556dd"></script>
-        <script src="../_static/doctools.js?v=9bcbadda"></script>
-        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/documentation_options.js?v=ee801c84"></script>
+        <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+        <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -49,7 +49,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <a href="../index.html" class="icon icon-home"> Vitis™ AI
           </a>
               <div class="version">
-                4.0
+                5.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -61,6 +61,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Setup and Install</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="reference/release_notes_5.0.html">Release Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reference/system_requirements.html">System Requirements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install/install.html">Host Install Instructions</a></li>
 </ul>
@@ -168,13 +169,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
              
   <section id="dpu-ip-details-and-system-integration">
 <span id="workflow-dpu"></span><h1>DPU IP Details and System Integration<a class="headerlink" href="#dpu-ip-details-and-system-integration" title="Link to this heading">¶</a></h1>
+<div class="dpu-ip-discontinued docutils container">
+<p><strong>DPU IP Discontinued</strong></p>
+</div>
 <section id="about-the-dpu-ip">
 <h2>About the DPU IP<a class="headerlink" href="#about-the-dpu-ip" title="Link to this heading">¶</a></h2>
 <p>AMD uses the acronym D-P-U to identify soft accelerators that target deep-learning inference. These “<strong>D</strong> eep Learning <strong>P</strong> rocessing <strong>U</strong> nits” are a vital component of the Vitis AI solution. This (perhaps overloaded) term can refer to one of several potential accelerator architectures covering multiple network topologies.</p>
 <p>A DPU comprises elements available in the AMD programmable logic fabric, such as DSP, BlockRAM, UltraRAM, LUTs, and Flip-Flops, or may be developed as a set of microcoded functions that are deployed on the AMD AI Engine, or “AI Engine” architecture. Furthermore, in the case of some applications, the DPU is likely to be comprised of programmable logic and AI Engine array resources.</p>
 <p>An example of the DPUCZ, targeting Zynq™ Ultrascale+™ devices is displayed in the following image:</p>
 <figure class="align-default" id="id4">
-<a class="reference internal image-reference" href="../_images/DPUCZ.PNG"><img alt="../_images/DPUCZ.PNG" src="../_images/DPUCZ.PNG" style="width: 1300px;" />
+<a class="reference internal image-reference" href="../_images/DPUCZ.PNG"><img alt="../_images/DPUCZ.PNG" src="../_images/DPUCZ.PNG" width="1300" />
 </a>
 <figcaption>
 <p><span class="caption-text">Features and Architecture of the Zynq Ultrascale+ DPUCZ</span><a class="headerlink" href="#id4" title="Link to this image">¶</a></p>
@@ -182,7 +186,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </figure>
 <p>Vitis AI provides the DPU IP and the required tools to deploy both standard and custom neural networks on AMD adaptable targets:</p>
 <figure class="align-default" id="id5">
-<a class="reference internal image-reference" href="../_images/VAI-1000ft.PNG"><img alt="../_images/VAI-1000ft.PNG" src="../_images/VAI-1000ft.PNG" style="width: 1300px;" />
+<a class="reference internal image-reference" href="../_images/VAI-1000ft.PNG"><img alt="../_images/VAI-1000ft.PNG" src="../_images/VAI-1000ft.PNG" width="1300" />
 </a>
 <figcaption>
 <p><span class="caption-text">Vitis AI 1000 Foot View</span><a class="headerlink" href="#id5" title="Link to this image">¶</a></p>
@@ -274,7 +278,7 @@ and run the compiled model files.</p>
 <p>The Vitis workflow enables the integration of the DPU IP as an acceleration kernel that is loaded at runtime in the form of an <code class="docutils literal notranslate"><span class="pre">xclbin</span></code> file. To provide developers with a reference platform that can be used as a starting point, the Vitis AI repository includes several <a class="reference external" href="https://github.com/Xilinx/Vitis-AI/tree/3.0/dpu">reference designs</a> for the different DPU architectures and target platforms.</p>
 <p>In addition, a Vitis tutorial is available which provides the <a class="reference external" href="https://github.com/Xilinx/Vitis-Tutorials/tree/2022.1/Vitis_Platform_Creation/Design_Tutorials/02-Edge-AI-ZCU104">end-to-end workflow</a> for creating a Vitis Platform for ZCU104 targets.</p>
 <figure class="align-default">
-<a class="reference internal image-reference" href="docs/reference/images/vitis_integration.PNG"><img alt="docs/reference/images/vitis_integration.PNG" src="docs/reference/images/vitis_integration.PNG" style="width: 1300px;" />
+<a class="reference internal image-reference" href="../_images/vitis_integration.PNG"><img alt="../_images/vitis_integration.PNG" src="../_images/vitis_integration.PNG" width="1300" />
 </a>
 </figure>
 </section>
@@ -287,7 +291,7 @@ and run the compiled model files.</p>
 <li><p>A quick-start example that assists you in deploying VART on Embedded targets is available <a class="reference external" href="https://github.com/Xilinx/Vitis-AI/tree/3.0/src/vai_runtime/quick_start_for_embedded.md">here</a>.</p></li>
 </ul>
 <figure class="align-default">
-<a class="reference internal image-reference" href="docs/reference/images/vivado_integration.PNG"><img alt="docs/reference/images/vivado_integration.PNG" src="docs/reference/images/vivado_integration.PNG" style="width: 1300px;" />
+<a class="reference internal image-reference" href="../_images/vivado_integration.PNG"><img alt="../_images/vivado_integration.PNG" src="../_images/vivado_integration.PNG" width="1300" />
 </a>
 </figure>
 </section>
@@ -620,7 +624,7 @@ Out<span class="w"> </span>of<span class="w"> </span>memory:<span class="w"> </s
 
   <div role="contentinfo">
     <p>&#169; Copyright 2024-2025, Advanced Micro Devices, Inc.
-      <span class="lastupdated">Last updated on September 02, 2025.
+      <span class="lastupdated">Last updated on June 15, 2026.
       </span></p>
   </div>
 

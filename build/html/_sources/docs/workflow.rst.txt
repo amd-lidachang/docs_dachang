@@ -1,6 +1,8 @@
 Overview
 --------
 
+.. include:: /dpu_ip_discontinued_notice.rst
+
 First Steps
 ~~~~~~~~~~~
 

@@ -1,6 +1,8 @@
 Host Installation Instructions
 ==============================
 
+.. include:: /dpu_ip_discontinued_notice.rst
+
 The purpose of this page is to provide the developer with guidance on the installation of Vitis |trade| AI tools on the development host PC. Instructions for installation of Vitis AI on the target are covered separately in the Quickstart documentation for the respective target.
 
 There are two primary options for installation:

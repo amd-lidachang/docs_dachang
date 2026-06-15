@@ -3,6 +3,8 @@
 Vitis AI Model Zoo
 ==================
 
+.. include:: /dpu_ip_discontinued_notice.rst
+
 The Vitis |trade| AI Model Zoo, incorporated into the Vitis AI repository, includes optimized deep learning models to speed up the deployment of deep learning inference on AMD platforms. These models cover different applications, including but not limited to ADAS/AD, medical, video surveillance, robotics, data center, and so on. You can get started with these free pre-trained models to enjoy the benefits of deep learning acceleration.
 
 Model Zoo Details and Performance

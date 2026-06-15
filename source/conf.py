@@ -89,11 +89,6 @@ edit_on_github_branch = 'master'
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
-# Expand/Collapse functionality
-def setup(app):
-    app.add_css_file('custom.css')
-
-
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
 #
@@ -152,7 +147,6 @@ html_theme_options = {
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
-html_css_files = ['_static/custom.css']
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
@@ -263,6 +257,7 @@ rinoh_documents = [dict(doc='index',        # top-level file (index.rst)
 # -- Extension configuration -------------------------------------------------
 # At the bottom of conf.py
 def setup(app):
+    app.add_css_file('custom.css')
     app.add_config_value('recommonmark_config', {
             'url_resolver': lambda url: github_doc_root + url,
             'auto_toc_tree_section': 'Contents',
