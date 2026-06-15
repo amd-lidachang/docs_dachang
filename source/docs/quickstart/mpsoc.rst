@@ -2,6 +2,8 @@
 Quick Start Guide for Zynq |trade| UltraScale+ |trade| 
 ######################################################
 
+.. include:: /dpu_ip_discontinued_notice.rst
+
 The AMD **DPUCZDX8G** for Zynq |trade| Ultrascale+ |trade| is a configurable computation engine dedicated to convolutional neural networks. It supports a highly optimized instruction set, enabling the deployment of most convolutional neural networks. The following instructions will help you to install the software and packages required to support KV260/ZCU102/ZCU104.
 
 

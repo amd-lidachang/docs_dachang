@@ -3,6 +3,8 @@
 Setting up the Versal VCK190
 ============================
 
+.. include:: /dpu_ip_discontinued_notice.rst
+
 Introduction
 ------------
 

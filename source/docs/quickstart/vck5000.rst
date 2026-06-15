@@ -2,6 +2,8 @@
 Quick Start Guide for VCK5000 
 #############################
 
+.. include:: /dpu_ip_discontinued_notice.rst
+
 The AMD **DPUCVDX8H** for Versal |trade| VCK5000 is a configurable computation engine dedicated to convolutional neural networks. It supports a highly optimized instruction set, enabling the deployment of most convolutional neural networks. The following instructions will help you to install the software and packages required to support VCK5000.
 
 .. image:: ../reference/images/vck5000.png
