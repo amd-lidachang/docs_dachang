@@ -4,6 +4,8 @@
 Installing a Vitis AI Patch
 ===========================
 
+.. include:: /dpu_ip_discontinued_notice.rst
+
 Most Vitis |trade| AI components consist of Anaconda packages. These packages are distributed as tarballs, for example
 `unilog-1.3.2-h7b12538_35.tar.bz2 <https://www.xilinx.com/bin/public/openDownload?filename=unilog-1.3.2-h7b12538_35.tar.bz2>`__.
 

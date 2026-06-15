@@ -1,6 +1,8 @@
 Release Notes 4.0
 ====================
 
+.. include:: /dpu_ip_discontinued_notice.rst
+
 Version Compatibility
 ---------------------
 

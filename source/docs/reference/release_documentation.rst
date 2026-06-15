@@ -2,6 +2,8 @@
 Vitis AI User Guides / DPU Product Guides
 =========================================
 
+.. include:: /dpu_ip_discontinued_notice.rst
+
 .. list-table:: Developer User Guides
    :widths: 30 70
    :header-rows: 1
