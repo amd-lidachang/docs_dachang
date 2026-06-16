@@ -1,6 +1,8 @@
 Developing a Model
 ==================
 
+.. include:: /dpu_ip_discontinued_notice.rst
+
 .. _model-inspector:
 
 Model Inspector

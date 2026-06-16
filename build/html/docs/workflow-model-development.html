@@ -20,16 +20,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-5RHQV7');</script>
 <!-- End Google Tag Manager -->
   <title>Developing a Model &mdash; Vitis™ AI 4.0 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/_static/custom.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=27bbe381" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=8de04d76" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
         <script src="../_static/documentation_options.js?v=9f5556dd"></script>
-        <script src="../_static/doctools.js?v=9bcbadda"></script>
-        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+        <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -151,6 +151,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
              
   <section id="developing-a-model">
 <h1>Developing a Model<a class="headerlink" href="#developing-a-model" title="Link to this heading">¶</a></h1>
+<div class="dpu-ip-discontinued docutils container">
+<p><strong>DPU IP Discontinued</strong></p>
+</div>
 <section id="model-inspector">
 <span id="id1"></span><h2>Model Inspector<a class="headerlink" href="#model-inspector" title="Link to this heading">¶</a></h2>
 <div class="admonition important">
@@ -160,7 +163,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>The Vitis AI quantizer and compiler are designed to parse and compile operators within a frozen FP32 graph for acceleration in hardware. However, novel neural network architectures, operators, and activation types are constantly being developed and optimized for prediction accuracy and performance. In this context, it is important to understand that while AMD strives to provide support for a wide variety of neural network architectures and provide these graphs for user reference, only some operators are supported for acceleration on the DPU. Furthermore, specific layer ordering requirements enable Vitis AI model deployment.</p>
 <p>In the early phases of development, it is highly recommended that the developer leverage the Vitis AI Model Inspector as an initial sanity check to confirm that the operators and sequence of operators in the graph is compatible with Vitis AI.</p>
 <figure class="align-default" id="id7">
-<a class="reference internal image-reference" href="../_images/Model_Inspector_Flow.PNG"><img alt="../_images/Model_Inspector_Flow.PNG" src="../_images/Model_Inspector_Flow.PNG" style="width: 1300px;" />
+<a class="reference internal image-reference" href="../_images/Model_Inspector_Flow.PNG"><img alt="../_images/Model_Inspector_Flow.PNG" src="../_images/Model_Inspector_Flow.PNG" width="1300" />
 </a>
 <figcaption>
 <p><span class="caption-text">Model Inspector Decision Tree</span><a class="headerlink" href="#id7" title="Link to this image">¶</a></p>
@@ -182,7 +185,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>For Alveo™ cards, the <a class="reference external" href="https://github.com/Xilinx/Vitis-AI/tree/3.0/examples/wego">Whole Graph Optimizer</a> (WeGO) automatically performs subgraph partitioning for models quantized by Vitis AI quantizer, and applies optimizations and acceleration for the DPU compatible subgraphs. The remaining partitions of the graph are dispatched to the native framework for CPU execution.</p>
 <p>Starting with the release of Vitis AI 3.0, we have enhanced Vitis AI support for the ONNX Runtime.  The Vitis AI Quantizer can now be leveraged to export a quantized ONNX model to the runtime where subgraphs suitable for deployment on the DPU are compiled.  Remaining subgraphs are then deployed by ONNX Runtime, leveraging the AMD Versal™ and Zynq™ UltraScale+™ MPSoC APUs, or the AMD64 (or x64) host processor (Alveo™ targets) to deploy these subgraphs.  The underlying software infrastructure is named VOE or “<strong>V</strong> itis AI <strong>O</strong> NNX Runtime <strong>E</strong> ngine”.  Users should refer to the section “Programming with VOE” in <a class="reference internal" href="reference/release_documentation.html"><span class="doc">UG1414</span></a> for additional information on this powerful workflow.</p>
 <figure class="align-default" id="id8">
-<a class="reference internal image-reference" href="../_images/VAI_3rd_party_ONNXRuntime_Edge.PNG"><img alt="../_images/VAI_3rd_party_ONNXRuntime_Edge.PNG" src="../_images/VAI_3rd_party_ONNXRuntime_Edge.PNG" style="width: 1300px;" />
+<a class="reference internal image-reference" href="../_images/VAI_3rd_party_ONNXRuntime_Edge.PNG"><img alt="../_images/VAI_3rd_party_ONNXRuntime_Edge.PNG" src="../_images/VAI_3rd_party_ONNXRuntime_Edge.PNG" width="1300" />
 </a>
 <figcaption>
 <p><span class="caption-text">Vitis-AI Integration With ONNX Runtime (Edge)</span><a class="headerlink" href="#id8" title="Link to this image">¶</a></p>
@@ -208,7 +211,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>The final phase of pruning, the transform step, removes the channels selected for pruning (previously zeroed weights), resulting in a reduction of the number of channels at each pruned layer in the final computational graph. For instance, a layer that previously required the computation of 128 channels (128 convolution kernels) may now only require the computation of output activations for 87 channels (i.e., 41 channels were pruned). Following the transform step, the model is now in a form that can be ingested by the Vitis AI Quantizer and deployed on the target.</p>
 <p>The following diagram illustrates the high-level pruning workflow:</p>
 <figure class="align-default" id="id9">
-<a class="reference internal image-reference" href="../_images/optimizer_workflow.PNG"><img alt="../_images/optimizer_workflow.PNG" src="../_images/optimizer_workflow.PNG" style="width: 1300px;" />
+<a class="reference internal image-reference" href="../_images/optimizer_workflow.PNG"><img alt="../_images/optimizer_workflow.PNG" src="../_images/optimizer_workflow.PNG" width="1300" />
 </a>
 <figcaption>
 <p><span class="caption-text">Vitis AI Optimizer Pruning Workflow</span><a class="headerlink" href="#id9" title="Link to this image">¶</a></p>
@@ -245,7 +248,7 @@ memory footprint, and data path bandwidth required for inference.</p>
 <p>The Vitis AI Quantizer, integrated as a component of either TensorFlow or PyTorch, performs a calibration step in which a subset of the original training data (typically 100-1000 samples, no labels required) is forward propagated through the network to analyze the distribution of the activations at each layer. The weights and activations are then quantized as 8-bit integer values. This process is referred to as Post-Training Quantization. Following quantization, the prediction accuracy of the network is re-tested using data from the validation set. If the accuracy is acceptable, the quantization process is complete.</p>
 <p>With certain network topologies, the developer may experience excessive accuracy loss. In these cases, a technique referred to as QAT (Quantization Aware Training) can be used with the source training data to execute several back propagation passes to optimize (fine-tune) the quantized weights.</p>
 <figure class="align-default" id="id10">
-<a class="reference internal image-reference" href="../_images/quant_workflow.PNG"><img alt="../_images/quant_workflow.PNG" src="../_images/quant_workflow.PNG" style="width: 1300px;" />
+<a class="reference internal image-reference" href="../_images/quant_workflow.PNG"><img alt="../_images/quant_workflow.PNG" src="../_images/quant_workflow.PNG" width="1300" />
 </a>
 <figcaption>
 <p><span class="caption-text">Vitis AI Quantizer Workflow</span><a class="headerlink" href="#id10" title="Link to this image">¶</a></p>
@@ -289,7 +292,7 @@ memory footprint, and data path bandwidth required for inference.</p>
 </div>
 <p>The following diagram illustrates a high-level overview of the Vitis AI Compiler workflow:</p>
 <figure class="align-default" id="id11">
-<a class="reference internal image-reference" href="../_images/compiler_workflow.PNG"><img alt="../_images/compiler_workflow.PNG" src="../_images/compiler_workflow.PNG" style="width: 1300px;" />
+<a class="reference internal image-reference" href="../_images/compiler_workflow.PNG"><img alt="../_images/compiler_workflow.PNG" src="../_images/compiler_workflow.PNG" width="1300" />
 </a>
 <figcaption>
 <p><span class="caption-text">Vitis AI Compiler Workflow</span><a class="headerlink" href="#id11" title="Link to this image">¶</a></p>
@@ -321,7 +324,7 @@ memory footprint, and data path bandwidth required for inference.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2024-2025, Advanced Micro Devices, Inc.
-      <span class="lastupdated">Last updated on September 02, 2025.
+      <span class="lastupdated">Last updated on June 16, 2026.
       </span></p>
   </div>
 

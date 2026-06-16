@@ -1,6 +1,8 @@
 Branching / Tagging Strategy
 ============================
 
+.. include:: /dpu_ip_discontinued_notice.rst
+
 Each updated release of Vitis |trade| AI is pushed directly to `master <https://github.com/Xilinx/Vitis-AI/tree/master>`__ on the release day. In addition, at that time, a tag is created for the repository; for example, see the tag for `v3.0 <https://github.com/Xilinx/Vitis-AI/tree/v3.0>`__.
 
 Following the release, the tagged version remains static, and additional inter-version updates are pushed to the master branch. Thus, the master branch is always the latest release and will have the latest fixes and documentation. The branch associated with a specific release (which will be “master” during the lifecycle of that release) will become a branch at the time of the next release.

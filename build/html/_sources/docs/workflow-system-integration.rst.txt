@@ -3,6 +3,7 @@
 DPU IP Details and System Integration
 -------------------------------------
 
+.. include:: /dpu_ip_discontinued_notice.rst
 
 About the DPU IP
 ================
