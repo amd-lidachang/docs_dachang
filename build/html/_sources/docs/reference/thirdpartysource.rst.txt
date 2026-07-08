@@ -3,8 +3,6 @@
 Third Party Source
 ==================
 
-.. include:: /dpu_ip_discontinued_notice.rst
-
 Ubuntu Packages
 ---------------
 

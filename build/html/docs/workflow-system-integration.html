@@ -19,15 +19,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-5RHQV7');</script>
 <!-- End Google Tag Manager -->
-  <title>DPU IP Details and System Integration &mdash; Vitis™ AI 5.0 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=27bbe381" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=8de04d76" />
+  <title>DPU IP Details and System Integration &mdash; Vitis™ AI 3.5 documentation</title><link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" /><link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=27bbe381" /><link rel="stylesheet" type="text/css" href="../_static/custom.css?v=6571abda" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../_static/documentation_options.js?v=ee801c84"></script>
+        <script src="../_static/documentation_options.js?v=490739ad"></script>
         <script src="../_static/doctools.js?v=fd6eb6e6"></script>
         <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/js/theme.js"></script>
@@ -49,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <a href="../index.html" class="icon icon-home"> Vitis™ AI
           </a>
               <div class="version">
-                5.0
+                3.5
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -61,14 +58,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Setup and Install</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="reference/release_notes_5.0.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/release_notes.html">Release Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reference/system_requirements.html">System Requirements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install/install.html">Host Install Instructions</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Quick Start Guides</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="quickstart/mpsoc.html">Zynq™ Ultrascale+™</a></li>
-<li class="toctree-l1"><a class="reference internal" href="quickstart/vck190.html">Versal™ AI Core VCK190</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart/vek280.html">Versal AI Edge VEK280</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart/v70.html">Alveo V70</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Workflow and Components</span></p>
 <ul class="current">
@@ -87,6 +84,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#version-and-compatibility">Version and Compatibility</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ip-and-reference-designs">IP and Reference Designs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vek280-dpu-reference-design">VEK280 DPU Reference Design</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#integrating-the-dpu">Integrating the DPU</a><ul>
@@ -114,14 +112,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="workflow-model-zoo.html">Vitis™ AI Model Zoo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow-model-zoo.html">Vitis AI Model Zoo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="workflow-model-development.html">Developing a Model for Vitis AI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="workflow-model-deployment.html">Deploying a Model with Vitis AI</a></li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Runtime API Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doxygen/api/classlist.html">C++ API Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doxygen/api/pythonlist.html">Python APIs</a></li>
+</ul>
 <p class="caption" role="heading"><span class="caption-text">Additional Information</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="reference/release_documentation.html">Vitis™ AI User Guides &amp; IP Product Guides</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://github.com/Xilinx/Vitis-AI-Tutorials">Vitis™ AI Developer Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/release_documentation.html">Vitis AI User Guides &amp; IP Product Guides</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Xilinx/Vitis-AI-Tutorials">Vitis AI Developer Tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="workflow-third-party.html">Third-party Inference Stack Integration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reference/version_compatibility.html">IP and Tools Compatibility</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reference/faq.html">Frequently Asked Questions</a></li>
@@ -130,7 +133,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p class="caption" role="heading"><span class="caption-text">Resources and Support</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="reference/additional_resources.html">Technical Support</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reference/additional_resources.html#additional-resources">Additional Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/additional_resources.html#id1">Additional Resources</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Related AMD Solutions</span></p>
 <ul>
@@ -138,9 +141,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/finn/">FINN &amp; Brevitas</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/inference-server/">Inference Server</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/amd/UIF">Unified Inference Frontend</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://ryzenai.docs.amd.com/en/latest/">Ryzen™ AI Developer Guide ~July 29</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://onnxruntime.ai/docs/execution-providers/community-maintained/Vitis-AI-ExecutionProvider.html">Vitis™ AI ONNX Runtime Execution Provider</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/VVAS/">Vitis™ Video Analytics SDK</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://onnxruntime.ai/docs/execution-providers/community-maintained/Vitis-AI-ExecutionProvider.html">Vitis AI ONNX Runtime Execution Provider</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/VVAS/">Vitis Video Analytics SDK</a></li>
 </ul>
 
         </div>
@@ -166,12 +168,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-             
   <section id="dpu-ip-details-and-system-integration">
 <span id="workflow-dpu"></span><h1>DPU IP Details and System Integration<a class="headerlink" href="#dpu-ip-details-and-system-integration" title="Link to this heading">¶</a></h1>
-<div class="dpu-ip-discontinued docutils container">
-<p><strong>DPU IP Discontinued</strong></p>
-</div>
+<div class="dpu-ip-discontinued"><strong>DPU IP Discontinued</strong></div>
 <section id="about-the-dpu-ip">
 <h2>About the DPU IP<a class="headerlink" href="#about-the-dpu-ip" title="Link to this heading">¶</a></h2>
 <p>AMD uses the acronym D-P-U to identify soft accelerators that target deep-learning inference. These “<strong>D</strong> eep Learning <strong>P</strong> rocessing <strong>U</strong> nits” are a vital component of the Vitis AI solution. This (perhaps overloaded) term can refer to one of several potential accelerator architectures covering multiple network topologies.</p>
@@ -255,16 +254,65 @@ You can configure the parameters to meet your data center application requiremen
 </section>
 <section id="ip-and-reference-designs">
 <h3>IP and Reference Designs<a class="headerlink" href="#ip-and-reference-designs" title="Link to this heading">¶</a></h3>
-<p>Users can download the DPU IP and reference design for their target platform from <a class="reference external" href="https://github.com/Xilinx/Vitis-AI/tree/3.0/dpu">the Vitis AI Github</a>.</p>
+<table class="docutils align-default" id="id6">
+<caption><span class="caption-text">DPU IP Resources</span><a class="headerlink" href="#id6" title="Link to this table">¶</a></caption>
+<colgroup>
+<col style="width: 12.5%" />
+<col style="width: 12.5%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Product Guide</p></th>
+<th class="head"><p>Platforms</p></th>
+<th class="head"><p>Vitis AI Release</p></th>
+<th class="head"><p>Reference Design</p></th>
+<th class="head"><p>IP-only Download</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>DPUCV2DX8G <a class="reference external" href="https://docs.xilinx.com/r/en-US/pg425-dpu">PG425</a></p></td>
+<td><p>VEK280/V70/Vx2802</p></td>
+<td><p>3.5</p></td>
+<td><p><a class="reference external" href="https://www.xilinx.com/bin/public/openDownload?filename=DPUCV2DX8G_VAI_v3.5.tar.gz">Download</a></p></td>
+<td><p><a class="reference external" href="https://www.xilinx.com/bin/public/openDownload?filename=DPUCV2DX8G_ip_repo_VAI_v3.5.tar.gz">Get IP</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>DPUCV2DX8G <a class="reference external" href="https://docs.xilinx.com/r/en-US/pg425-dpu">PG425</a></p></td>
+<td><p>VE2302(see note)</p></td>
+<td><p>3.5</p></td>
+<td><p><a class="reference external" href="https://www.xilinx.com/member/vitis-ai-vek280.html">Early Access</a></p></td>
+<td><p><a class="reference external" href="https://www.xilinx.com/member/vitis-ai-vek280.html">Early Access</a></p></td>
+</tr>
+<tr class="row-even"><td><p>DPUCZDX8G <a class="reference external" href="https://docs.xilinx.com/r/en-US/pg338-dpu">PG338</a></p></td>
+<td><p>MPSoC &amp; Kria K26</p></td>
+<td><p>3.0</p></td>
+<td><p><a class="reference external" href="https://www.xilinx.com/bin/public/openDownload?filename=DPUCZDX8G_VAI_v3.5.tar.gz">Download</a></p></td>
+<td><p><a class="reference external" href="https://www.xilinx.com/bin/public/openDownload?filename=DPUCZDX8G_ip_repo_VAI_v3.5.tar.gz">Get IP</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>DPUCVDX8G <a class="reference external" href="https://docs.xilinx.com/r/en-US/pg389-dpu">PG389</a></p></td>
+<td><p>VCK190</p></td>
+<td><p>3.0</p></td>
+<td><p><a class="reference external" href="https://www.xilinx.com/bin/public/openDownload?filename=DPUCVDX8G_VAI_v3.0.tar.gz">Download</a></p></td>
+<td><p><a class="reference external" href="https://www.xilinx.com/bin/public/openDownload?filename=DPUCVDX8G_ip_repo_VAI_v3.0.tar.gz">Get IP</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Until the release of Versal™ AI Edge production speed files (currently targeted with release of Vivado 2023.2.1), PDI generation for Versal AI Edge will require an early enablement license that can be requested via the Versal AI Edge Errata Secure Site.  If the user wishes to reconfigure and recompile the DPUCV2DX8G, access to an AIE-ML Compiler early enablement license is required.  Please contact your local AMD sales or FAE contact to request access.</p>
+</div>
+</section>
+<section id="vek280-dpu-reference-design">
+<h3>VEK280 DPU Reference Design<a class="headerlink" href="#vek280-dpu-reference-design" title="Link to this heading">¶</a></h3>
+<p>Users can access the documentation for the VEK280 reference design <a class="reference internal" href="ref_design_docs/README_DPUCV2DX8G.html"><span class="doc">here</span></a></p>
 </section>
 </section>
 <section id="integrating-the-dpu">
 <span id="id1"></span><h2>Integrating the DPU<a class="headerlink" href="#integrating-the-dpu" title="Link to this heading">¶</a></h2>
 <p>The basic steps to build a platform that integrates a Vitis™ AI DPU are as follows:</p>
 <p>1. A custom hardware platform is built using the Vitis software platform based on the Vitis
-Target Platform. The generated hardware includes the DPU IP and other kernels. In the Vitis
-AI release package, pre-built SD card images (for ZCU102/104, KV260, VCK190 and
-VEK280) and Versal shells are included for quick start and application development. You can
+Target Platform. The generated hardware includes the DPU IP and other kernels. You can
 also use the AMD Vitis™ or Vivado™ flows to integrate the DPU and build the custom hardware
 to suit your need.</p>
 <p>2. The Vitis AI toolchain in the host machine is used to build the model. It takes the pre-trained
@@ -275,8 +323,8 @@ and run the compiled model files.</p>
 <section id="vitis-integration">
 <span id="id2"></span><h3>Vitis Integration<a class="headerlink" href="#vitis-integration" title="Link to this heading">¶</a></h3>
 <p>The Vitis™ workflow specifically targets developers with a software-centric approach to AMD SoC system development. Vitis AI is differentiated from traditional FPGA flows, enabling you to build FPGA acceleration into your applications without developing RTL kernels.</p>
-<p>The Vitis workflow enables the integration of the DPU IP as an acceleration kernel that is loaded at runtime in the form of an <code class="docutils literal notranslate"><span class="pre">xclbin</span></code> file. To provide developers with a reference platform that can be used as a starting point, the Vitis AI repository includes several <a class="reference external" href="https://github.com/Xilinx/Vitis-AI/tree/3.0/dpu">reference designs</a> for the different DPU architectures and target platforms.</p>
-<p>In addition, a Vitis tutorial is available which provides the <a class="reference external" href="https://github.com/Xilinx/Vitis-Tutorials/tree/2022.1/Vitis_Platform_Creation/Design_Tutorials/02-Edge-AI-ZCU104">end-to-end workflow</a> for creating a Vitis Platform for ZCU104 targets.</p>
+<p>The Vitis workflow enables the integration of the DPU IP as an acceleration kernel that is loaded at runtime in the form of an <code class="docutils literal notranslate"><span class="pre">xclbin</span></code> file. To provide developers with a reference platform that can be used as a starting point, the Vitis AI repository includes several <a class="reference external" href="https://github.com/Xilinx/Vitis-AI/tree/v3.5/dpu">reference designs</a> for the different DPU architectures and target platforms.</p>
+<p>In addition, a Vitis tutorial is available which provides the <a class="reference external" href="https://github.com/Xilinx/Vitis-Tutorials/tree/2023.1/Vitis_Platform_Creation/Design_Tutorials/02-Edge-AI-ZCU104">end-to-end workflow</a> for creating a Vitis Platform for ZCU104 targets.</p>
 <figure class="align-default">
 <a class="reference internal image-reference" href="../_images/vitis_integration.PNG"><img alt="../_images/vitis_integration.PNG" src="../_images/vitis_integration.PNG" width="1300" />
 </a>
@@ -284,11 +332,11 @@ and run the compiled model files.</p>
 </section>
 <section id="vivado-integration">
 <span id="id3"></span><h3>Vivado Integration<a class="headerlink" href="#vivado-integration" title="Link to this heading">¶</a></h3>
-<p>The Vivado™ workflow targets traditional FPGA developers. It is important to note that the DPU IP is not currently integrated into the Vivado IP catalog. Currently, in order to update support the latest operators and network topologies at the time of Vitis AI release, the IP is released asynchronously as a <a class="reference external" href="https://github.com/Xilinx/Vitis-AI/tree/3.0/dpu">reference design and IP repository</a>.</p>
+<p>The Vivado™ workflow targets traditional FPGA developers. It is important to note that the DPU IP is not currently integrated into the Vivado IP catalog. Currently, in order to update support the latest operators and network topologies at the time of Vitis AI release, the IP is released asynchronously as a reference design and IP repository.</p>
 <p>For more information, refer to the following resources:</p>
 <ul class="simple">
 <li><p>To integrate the DPU in a Vivado design, see this <a class="reference external" href="https://github.com/Xilinx/Vitis-AI-Tutorials/blob/2.0/Tutorials/Vitis-AI-Vivado-TRD/">tutorial</a>.</p></li>
-<li><p>A quick-start example that assists you in deploying VART on Embedded targets is available <a class="reference external" href="https://github.com/Xilinx/Vitis-AI/tree/3.0/src/vai_runtime/quick_start_for_embedded.md">here</a>.</p></li>
+<li><p>A quick-start example that assists you in deploying VART on Embedded targets is available <a class="reference external" href="https://github.com/Xilinx/Vitis-AI/tree/v3.5/src/vai_runtime/quick_start_for_embedded.md">here</a>.</p></li>
 </ul>
 <figure class="align-default">
 <a class="reference internal image-reference" href="../_images/vivado_integration.PNG"><img alt="../_images/vivado_integration.PNG" src="../_images/vivado_integration.PNG" width="1300" />
@@ -298,15 +346,14 @@ and run the compiled model files.</p>
 <section id="vitis-ai-linux-recipes">
 <span id="linux-dpu-recipes"></span><h3>Vitis AI Linux Recipes<a class="headerlink" href="#vitis-ai-linux-recipes" title="Link to this heading">¶</a></h3>
 <p>Yocto and PetaLinux users will require bitbake recipes for the Vitis AI components that are compiled for the target. These recipes are provided in the <a class="reference external" href="https://github.com/Xilinx/Vitis-AI/tree/v3.5/src/vai_petalinux_recipes">source code folder</a>.</p>
-<p>Yocto and PetaLinux users will require bitbake recipes for the Vitis AI components that are compiled for the target. These recipes are provided in the <a class="reference external" href="https://github.com/Xilinx/Vitis-AI/tree/3.0/src/vai_petalinux_recipes">source code folder</a>.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>For Vitis AI releases &gt;= v2.0, Vivado users (Zynq™ Ultrascale+™ and Kria™ applications) must compile VART standalone without XRT. However, Vitis users must compile VART with XRT (required for Vitis kernel integration). All designs that leverage Vitis AI require VART, while all Alveo and Versal™ designs must include XRT. By default, the Vitis AI Docker images incorporate XRT. Perhaps most important is that the Linux bitbake recipe for VART <a class="reference external" href="https://github.com/Xilinx/Vitis-AI/tree/3.0/src/vai_petalinux_recipes/recipes-vitis-ai/vart/vart_3.0.bb#L17">assumes</a> by default that you are leveraging the Vitis flow. If you are leveraging the DPU in Vivado with Linux, you must either leverage <code class="docutils literal notranslate"><span class="pre">vart_3.0_vivado.bb</span></code> or, comment out the line <code class="docutils literal notranslate"><span class="pre">PACKAGECONFIG:append</span> <span class="pre">=</span> <span class="pre">&quot;</span> <span class="pre">vitis&quot;</span></code> in the <code class="docutils literal notranslate"><span class="pre">vart_3.0.bb</span></code> recipe in order to ensure that you are compiling VART without XRT. Failing to do so will result in runtime errors when executing VART APIs. Specifically, XRT, which is not compatible with Vivado will error out when it attempts to load an xclbin file, a kernel file that is absent in the Vivado flow.  Finally, be sure to only include one of the two bitbake recipes in the Petalinux build folder!</p>
+<p>For Vitis AI releases &gt;= v2.0, Vivado users (Zynq™ Ultrascale+™ and Kria™ applications) must compile VART standalone without XRT. However, Vitis users must compile VART with XRT (required for Vitis kernel integration). All designs that leverage Vitis AI require VART, while all Alveo and Versal™ designs must include XRT. By default, the Vitis AI Docker images incorporate XRT. Perhaps most important is that the Linux bitbake recipe for VART <a class="reference external" href="https://github.com/Xilinx/Vitis-AI/tree/v3.5/src/vai_petalinux_recipes/recipes-vitis-ai/vart/vart_3.5.bb#L17">assumes</a> by default that you are leveraging the Vitis flow. If you are leveraging the DPU in Vivado with Linux, you must either leverage <code class="docutils literal notranslate"><span class="pre">vart_3.5_vivado.bb</span></code> and rename it <code class="docutils literal notranslate"><span class="pre">vart_3.5.bb</span></code> or, comment out the line <code class="docutils literal notranslate"><span class="pre">PACKAGECONFIG:append</span> <span class="pre">=</span> <span class="pre">&quot;</span> <span class="pre">vitis&quot;</span></code> in the <code class="docutils literal notranslate"><span class="pre">vart_3.5.bb</span></code> recipe in order to ensure that you are compiling VART without XRT. Failing to do so will result in runtime errors when executing VART APIs. Specifically, XRT, which is not compatible with Vivado will error out when it attempts to load an xclbin file, a kernel file that is absent in the Vivado flow.  Finally, be sure to only include one of the two bitbake recipes in the Petalinux build folder!</p>
 </div>
 <p>There are two ways to integrate the Vitis™ AI Library and Runtime in a custom design:</p>
 <ul class="simple">
 <li><p>Build the Linux image using Petalinux, incorporating the necessary recipes.</p></li>
-<li><p>Install Vitis AI 3.0 to the target leveraging a pre-built package at run time.  For details of this procedure, please see <a class="reference internal" href="#vart-vail-online-install"><span class="std std-ref">Vitis AI Online Installation</span></a></p></li>
+<li><p>Install Vitis AI 3.5 to the target leveraging a pre-built package at run time.  For details of this procedure, please see <a class="reference internal" href="#vart-vail-online-install"><span class="std std-ref">Vitis AI Online Installation</span></a></p></li>
 </ul>
 </section>
 <section id="vitis-ai-online-installation">
@@ -316,7 +363,7 @@ and run the compiled model files.</p>
 <p>If you have an updated version of the Vitis AI Runtime (perhaps you have made changes to the source code) and simply wish to install the update to your target without rebuilding Petalinux, follow these steps.</p>
 <blockquote>
 <div><ul>
-<li><p>Copy the board_setup/[TARGET] folder to the board using scp, where [TARGET] = {mpsoc, vck190} and [IP_OF_TARGET] is the IP address of the target board.</p>
+<li><p>Copy the board_setup/[TARGET] folder to the board using scp, where [TARGET] = {mpsoc, vck190, vek280} and [IP_OF_TARGET] is the IP address of the target board.</p>
 <div class="highlight-Bash notranslate"><div class="highlight"><pre><span></span>scp<span class="w"> </span>-r<span class="w"> </span>board_setup/<span class="o">[</span>TARGET<span class="o">]</span><span class="w"> </span>root@<span class="o">[</span>IP_OF_TARGET<span class="o">]</span>:~/
 </pre></div>
 </div>
@@ -335,97 +382,8 @@ bash<span class="w"> </span>target_vart_setup.sh
 <h4>Library<a class="headerlink" href="#library" title="Link to this heading">¶</a></h4>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The Vitis AI 3.0 RPM packages are now available.</p>
+<p>Vitis AI RPM packages will not be available until 1-3 months following the Vitis AI release.  Due to historic problems with this delay and the impact on this workflow, we will update this section of the documentation once the package is available.  Please check back on Github.IO for the latest update or <a class="reference external" href="mailto:amd_ai_mkt&#37;&#52;&#48;amd&#46;com">email us</a> for updates if this page is not updated prior to August 15,2023.</p>
 </div>
-<p>To install the Vitis AI Library on your target you can attempt the following procedure.  This procedure may be useful if you have a custom hardware target that you wish to enable.</p>
-<ol class="arabic simple">
-<li><p>Verify what version, if any, of the Vitis AI Library is currently installed on the target.</p></li>
-</ol>
-<blockquote>
-<div><div class="highlight-Bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>Target<span class="o">]</span><span class="w"> </span>$<span class="w"> </span>cat<span class="w"> </span>/etc/yum.repos.d/oe-remote-repo-sswreleases-rel-v2022-generic-rpm.repo
-</pre></div>
-</div>
-</div></blockquote>
-<p>The result will be similar to the following:</p>
-<blockquote>
-<div><div class="highlight-Bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>oe-remote-repo-sswreleases-rel-v2022-generic-rpm-cortexa72_cortexa53<span class="o">]</span>
-<span class="nv">name</span><span class="o">=</span>OE<span class="w"> </span>Remote<span class="w"> </span>Repo:<span class="w"> </span>sswreleases<span class="w"> </span>rel-v2022<span class="w"> </span>generic<span class="w"> </span>rpm<span class="w"> </span>cortexa72_cortexa53
-<span class="nv">baseurl</span><span class="o">=</span>http://petalinux.xilinx.com/sswreleases/rel-v2022/generic/rpm/cortexa72_cortexa53<span class="w">  </span><span class="o">(</span>contains<span class="w"> </span>vai2.5<span class="w"> </span>and<span class="w"> </span>vai3.0<span class="w"> </span>rpm<span class="w"> </span>packages<span class="o">)</span>
-<span class="nv">gpgcheck</span><span class="o">=</span><span class="m">0</span>
-</pre></div>
-</div>
-</div></blockquote>
-<ol class="arabic simple" start="2">
-<li><p>Execute the command to install the latest version of the Vitis AI Library.</p></li>
-</ol>
-<blockquote>
-<div><div class="highlight-Bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>Target<span class="o">]</span><span class="w"> </span>$<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>vitis-ai-library
-</pre></div>
-</div>
-</div></blockquote>
-<p>If a version of the Vitis AI Library is installed on the target, the result will be similar to the following.</p>
-<blockquote>
-<div><div class="highlight-Bash notranslate"><div class="highlight"><pre><span></span>Last<span class="w"> </span>metadata<span class="w"> </span>expiration<span class="w"> </span>check:<span class="w"> </span><span class="m">2</span>:18:44<span class="w"> </span>ago<span class="w"> </span>on<span class="w"> </span>Sun<span class="w"> </span>Jun<span class="w"> </span><span class="m">25</span><span class="w"> </span><span class="m">20</span>:53:29<span class="w"> </span><span class="m">2023</span>.
-Package<span class="w"> </span>vitis-ai-library-3.0-r0.0.cortexa72_cortexa53<span class="w"> </span>is<span class="w"> </span>already<span class="w"> </span>installed.
-Dependencies<span class="w"> </span>resolved.
-Nothing<span class="w"> </span>to<span class="w"> </span><span class="k">do</span>.
-Complete!
-</pre></div>
-</div>
-</div></blockquote>
-<ol class="arabic simple" start="3">
-<li><p>If you need to remove the installed Vitis AI Library, execute this command.</p></li>
-</ol>
-<blockquote>
-<div><div class="highlight-Bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>Target<span class="o">]</span><span class="w"> </span>$<span class="w"> </span>dnf<span class="w"> </span>remove<span class="w"> </span>vitis-ai-library
-</pre></div>
-</div>
-</div></blockquote>
-<p>The result will be similar to the following:</p>
-<blockquote>
-<div><div class="highlight-Bash notranslate"><div class="highlight"><pre><span></span>Transaction<span class="w"> </span><span class="nv">Summary</span>
-<span class="o">============================================================================================================================</span>
-Remove<span class="w">  </span><span class="m">1001</span><span class="w"> </span>Packages
-
-Freed<span class="w"> </span>space:<span class="w"> </span><span class="m">857</span><span class="w"> </span>M
-Is<span class="w"> </span>this<span class="w"> </span>ok<span class="w"> </span><span class="o">[</span>y/N<span class="o">]</span>:<span class="w"> </span>y
-
-Erasing…<span class="w"> </span>please<span class="w"> </span><span class="nb">wait</span><span class="w"> </span>a<span class="w"> </span><span class="k">while</span>
-
-and<span class="w"> </span><span class="k">then</span><span class="w"> </span>“dnf<span class="w"> </span>install<span class="w"> </span>vitis-ai-library”:
-
-<span class="o">============================================================================================================================</span>
-Package<span class="w">          </span>Architecture<span class="w">        </span>Version<span class="w">    </span>Repository<span class="w">                                                            </span><span class="nv">Size</span>
-<span class="o">============================================================================================================================</span>
-Installing:
-vitis-ai-library<span class="w"> </span>cortexa72_cortexa53<span class="w"> </span><span class="m">3</span>.0-r0.0<span class="w">   </span>oe-remote-repo-sswreleases-rel-v2022-generic-rpm-cortexa72_cortexa53<span class="w"> </span><span class="m">3</span>.2<span class="w"> </span>M
-Installing<span class="w"> </span>dependencies:
-python3-protobuf<span class="w"> </span>cortexa72_cortexa53<span class="w"> </span><span class="m">3</span>.17.3-r0.0
-oe-remote-repo-sswreleases-rel-v2022-generic-rpm-cortexa72_cortexa53<span class="w"> </span><span class="m">291</span><span class="w"> </span>k
-target-factory<span class="w">   </span>cortexa72_cortexa53<span class="w"> </span><span class="m">3</span>.0-r0.0<span class="w">   </span>oe-remote-repo-sswreleases-rel-v2022-generic-rpm-cortexa72_cortexa53<span class="w">  </span><span class="m">98</span><span class="w"> </span>k
-unilog<span class="w">           </span>cortexa72_cortexa53<span class="w"> </span><span class="m">3</span>.0-r0.0<span class="w">   </span>oe-remote-repo-sswreleases-rel-v2022-generic-rpm-cortexa72_cortexa53<span class="w">  </span><span class="m">25</span><span class="w"> </span>k
-vart<span class="w">             </span>cortexa72_cortexa53<span class="w"> </span><span class="m">3</span>.0-r0.0<span class="w">   </span>oe-remote-repo-sswreleases-rel-v2022-generic-rpm-cortexa72_cortexa53<span class="w"> </span><span class="m">697</span><span class="w"> </span>k
-xir<span class="w">              </span>cortexa72_cortexa53<span class="w"> </span><span class="m">3</span>.0-r0.0<span class="w">   </span>oe-remote-repo-sswreleases-rel-v2022-generic-rpm-cortexa72_cortexa53<span class="w"> </span><span class="m">754</span><span class="w"> </span>k
-
-Transaction<span class="w"> </span><span class="nv">Summary</span>
-<span class="o">============================================================================================================================</span>
-Install<span class="w">  </span><span class="m">6</span><span class="w"> </span>Packages
-
-Total<span class="w"> </span>download<span class="w"> </span>size:<span class="w"> </span><span class="m">5</span>.0<span class="w"> </span>M
-Installed<span class="w"> </span>size:<span class="w"> </span><span class="m">28</span><span class="w"> </span>M
-Is<span class="w"> </span>this<span class="w"> </span>ok<span class="w"> </span><span class="o">[</span>y/N<span class="o">]</span>:<span class="w"> </span>y
-
-Please<span class="w"> </span><span class="nb">wait</span><span class="w"> </span>a<span class="w"> </span><span class="k">while</span>
-
-Installed:
-<span class="w">  </span>python3-protobuf-3.17.3-r0.0.cortexa72_cortexa53<span class="w">                </span>target-factory-3.0-r0.0.cortexa72_cortexa53
-<span class="w">  </span>unilog-3.0-r0.0.cortexa72_cortexa53<span class="w">                             </span>vart-3.0-r0.0.cortexa72_cortexa53
-<span class="w">  </span>vitis-ai-library-3.0-r0.0.cortexa72_cortexa53<span class="w">                   </span>xir-3.0-r0.0.cortexa72_cortexa53
-
-Complete!
-</pre></div>
-</div>
-</div></blockquote>
 </section>
 <section id="optimization-for-mpsoc-targets">
 <h4>Optimization for MPSoC Targets<a class="headerlink" href="#optimization-for-mpsoc-targets" title="Link to this heading">¶</a></h4>
@@ -451,7 +409,7 @@ Complete!
 </section>
 <section id="rebuilding-the-linux-image-with-petalinux">
 <h3>Rebuilding the Linux Image With Petalinux<a class="headerlink" href="#rebuilding-the-linux-image-with-petalinux" title="Link to this heading">¶</a></h3>
-<p>Most developers will need to build a Petalinux or Yocto Vitis AI 3.0 image for their platform. You can obtain the recipes for Vitis AI 3.0 in the following two ways:</p>
+<p>Most developers will need to build a Petalinux or Yocto Vitis AI 3.5 image for their platform. You can obtain the recipes for Vitis AI 3.5 in the following two ways:</p>
 <ul class="simple">
 <li><p>Using <code class="docutils literal notranslate"><span class="pre">recipes-vitis-ai</span></code> in this repo.</p></li>
 <li><p>Upgrading the Petalinux eSDK.</p></li>
@@ -471,7 +429,7 @@ Complete!
 </pre></div>
 </div>
 </li>
-<li><p>Delete either <code class="docutils literal notranslate"><span class="pre">recipes-vitis-ai/vart/vart_3.0.bb</span></code> or <code class="docutils literal notranslate"><span class="pre">recipes-vitis-ai/vart/vart_3.0_vivado.bb</span></code> depending on workflow that you have selected for your design.  If you use <code class="docutils literal notranslate"><span class="pre">recipes-vitis-ai/vart/vart_3.0_vivado.bb</span></code> please rename it <code class="docutils literal notranslate"><span class="pre">recipes-vitis-ai/vart/vart_3.0.bb</span></code>.</p></li>
+<li><p>Delete either <code class="docutils literal notranslate"><span class="pre">recipes-vitis-ai/vart/vart_3.5.bb</span></code> or <code class="docutils literal notranslate"><span class="pre">recipes-vitis-ai/vart/vart_3.5_vivado.bb</span></code> depending on workflow that you have selected for your design.  If you use <code class="docutils literal notranslate"><span class="pre">recipes-vitis-ai/vart/vart_3.5_vivado.bb</span></code> please rename it <code class="docutils literal notranslate"><span class="pre">recipes-vitis-ai/vart/vart_3.5.bb</span></code>.</p></li>
 <li><p>Edit <code class="docutils literal notranslate"><span class="pre">&lt;petalinux</span> <span class="pre">project&gt;/project-spec/meta-user/conf/user-rootfsconfig</span></code>
 file, appending the following lines:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CONFIG_vitis</span><span class="o">-</span><span class="n">ai</span><span class="o">-</span><span class="n">library</span>
@@ -497,15 +455,15 @@ file, appending the following lines:</p>
 <section id="using-upgrade-petalinux-esdk">
 <h4>Using Upgrade Petalinux eSDK<a class="headerlink" href="#using-upgrade-petalinux-esdk" title="Link to this heading">¶</a></h4>
 <p>Run the following commands to upgrade PetaLinux.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>&lt;petalinux-v2022.2&gt;/settings
-petalinux-upgrade<span class="w"> </span>-u<span class="w"> </span>‘http://petalinux.xilinx.com/sswreleases/rel-v2022/sdkupdate/2022.2_update1/’<span class="w"> </span>-p<span class="w"> </span>‘aarch64’
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>&lt;petalinux-v2023.1&gt;/settings
+petalinux-upgrade<span class="w"> </span>-u<span class="w"> </span>‘http://petalinux.xilinx.com/sswreleases/rel-v2023/sdkupdate/2023.1_update1/’<span class="w"> </span>-p<span class="w"> </span>‘aarch64’
 </pre></div>
 </div>
-<p>Following this upgrade, you will find <code class="docutils literal notranslate"><span class="pre">vitis-ai-library_3.0.bb</span></code> recipe in <code class="docutils literal notranslate"><span class="pre">&lt;petalinux</span> <span class="pre">project&gt;/components/yocto/layers/meta-vitis-ai</span></code>.</p>
+<p>Following this upgrade, you will find <code class="docutils literal notranslate"><span class="pre">vitis-ai-library_3.5.bb</span></code> recipe in <code class="docutils literal notranslate"><span class="pre">&lt;petalinux</span> <span class="pre">project&gt;/components/yocto/layers/meta-vitis-ai</span></code>.</p>
 <p>For details about this process, refer to <a class="reference external" href="https://docs.xilinx.com/r/en-US/ug1144-petalinux-tools-reference-guide/petalinux-upgrade-Option">Petalinux Upgrade</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><code class="docutils literal notranslate"><span class="pre">2022.2_update1</span></code> will be released approximately 1 month after Vitis 3.0 release. The name of <code class="docutils literal notranslate"><span class="pre">2022.2_update1</span></code> may be changed. Modify it accordingly.</p>
+<p><code class="docutils literal notranslate"><span class="pre">2023.1_update1</span></code> will be released approximately 1 month after Vitis 3.5 release. The name of <code class="docutils literal notranslate"><span class="pre">2023.1_update1</span></code> may change. Modify it accordingly.</p>
 </div>
 </section>
 </section>

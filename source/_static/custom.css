@@ -24,14 +24,11 @@
 }
 
 .dpu-ip-discontinued {
-    margin: 0 0 24px;
-    padding: 10px 14px;
-    border-left: 4px solid #c43b2f;
-    background: #fff4f1;
-    color: #5f160f;
-    font-size: 1.05em;
-}
-
-.dpu-ip-discontinued p {
-    margin: 0;
+    margin: 22px 0 36px;
+    padding: 18px 26px;
+    border-left: 4px solid #b84a3f;
+    background: #fff5f2;
+    color: #4a170f;
+    font-size: 24px;
+    font-weight: 700;
 }

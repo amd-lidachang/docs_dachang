@@ -45,8 +45,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
   {%- endif %}
   {%- for css in css_files %}
-    {%- if css.filename is defined %}
+    {%- if sphinx_version_info >= (4, 0) -%}
       {{ css_tag(css) }}
+    {%- elif css|attr("rel") %}
+      <link rel="{{ css.rel }}" href="{{ pathto(css.filename, 1) }}" type="text/css"{% if css.title is not none %} title="{{ css.title }}"{% endif %} />
     {%- else %}
       <link rel="stylesheet" href="{{ pathto(css, 1) }}" type="text/css" />
     {%- endif %}
@@ -231,7 +233,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
           {%- block document %}
            <div itemprop="articleBody">
-             {% block body %}{% endblock %}
+             {%- set rendered_body -%}{% block body %}{% endblock %}{%- endset -%}
+             {{ rendered_body | replace('</h1>', '</h1>\n<div class="dpu-ip-discontinued"><strong>DPU IP Discontinued</strong></div>', 1) }}
            </div>
            {%- if self.comments()|trim %}
              <div class="articleComments">

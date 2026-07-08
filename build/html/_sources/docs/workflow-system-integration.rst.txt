@@ -3,7 +3,6 @@
 DPU IP Details and System Integration
 -------------------------------------
 
-.. include:: /dpu_ip_discontinued_notice.rst
 
 About the DPU IP
 ================
@@ -105,7 +104,48 @@ The table below associates currently available DPU IP with the supported target,
 IP and Reference Designs
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Users can download the DPU IP and reference design for their target platform from `the Vitis AI Github <https://github.com/Xilinx/Vitis-AI/tree/3.0/dpu>`__.
+.. list-table:: DPU IP Resources
+   :widths: 10 10 20 20 20
+   :header-rows: 1
+
+
+   * - Product Guide
+     - Platforms
+     - Vitis AI Release
+     - Reference Design
+     - IP-only Download
+
+   * - DPUCV2DX8G `PG425 <https://docs.xilinx.com/r/en-US/pg425-dpu>`__
+     - VEK280/V70/Vx2802
+     - 3.5
+     - `Download <https://www.xilinx.com/bin/public/openDownload?filename=DPUCV2DX8G_VAI_v3.5.tar.gz>`__
+     - `Get IP <https://www.xilinx.com/bin/public/openDownload?filename=DPUCV2DX8G_ip_repo_VAI_v3.5.tar.gz>`__
+
+   * - DPUCV2DX8G `PG425 <https://docs.xilinx.com/r/en-US/pg425-dpu>`__
+     - VE2302(see note)
+     - 3.5
+     - `Early Access <https://www.xilinx.com/member/vitis-ai-vek280.html>`__
+     - `Early Access <https://www.xilinx.com/member/vitis-ai-vek280.html>`__
+
+   * - DPUCZDX8G `PG338 <https://docs.xilinx.com/r/en-US/pg338-dpu>`__
+     - MPSoC & Kria K26
+     - 3.0
+     - `Download <https://www.xilinx.com/bin/public/openDownload?filename=DPUCZDX8G_VAI_v3.5.tar.gz>`__
+     - `Get IP <https://www.xilinx.com/bin/public/openDownload?filename=DPUCZDX8G_ip_repo_VAI_v3.5.tar.gz>`__
+		
+   * - DPUCVDX8G `PG389 <https://docs.xilinx.com/r/en-US/pg389-dpu>`__
+     - VCK190
+     - 3.0
+     - `Download <https://www.xilinx.com/bin/public/openDownload?filename=DPUCVDX8G_VAI_v3.0.tar.gz>`__
+     - `Get IP <https://www.xilinx.com/bin/public/openDownload?filename=DPUCVDX8G_ip_repo_VAI_v3.0.tar.gz>`__	
+
+
+.. note:: Until the release of Versal |trade| AI Edge production speed files (currently targeted with release of Vivado 2023.2.1), PDI generation for Versal AI Edge will require an early enablement license that can be requested via the Versal AI Edge Errata Secure Site.  If the user wishes to reconfigure and recompile the DPUCV2DX8G, access to an AIE-ML Compiler early enablement license is required.  Please contact your local AMD sales or FAE contact to request access.
+
+VEK280 DPU Reference Design
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Users can access the documentation for the VEK280 reference design :doc:`here <ref_design_docs/README_DPUCV2DX8G>`
 
 	
 .. _integrating-the-dpu:
@@ -116,9 +156,7 @@ Integrating the DPU
 The basic steps to build a platform that integrates a Vitis |trade| AI DPU are as follows:
 
 1. A custom hardware platform is built using the Vitis software platform based on the Vitis
-Target Platform. The generated hardware includes the DPU IP and other kernels. In the Vitis
-AI release package, pre-built SD card images (for ZCU102/104, KV260, VCK190 and
-VEK280) and Versal shells are included for quick start and application development. You can
+Target Platform. The generated hardware includes the DPU IP and other kernels. You can
 also use the AMD Vitis |trade| or Vivado |trade| flows to integrate the DPU and build the custom hardware
 to suit your need.
 
@@ -136,9 +174,9 @@ Vitis Integration
 
 The Vitis |trade| workflow specifically targets developers with a software-centric approach to AMD SoC system development. Vitis AI is differentiated from traditional FPGA flows, enabling you to build FPGA acceleration into your applications without developing RTL kernels.
 
-The Vitis workflow enables the integration of the DPU IP as an acceleration kernel that is loaded at runtime in the form of an ``xclbin`` file. To provide developers with a reference platform that can be used as a starting point, the Vitis AI repository includes several `reference designs <https://github.com/Xilinx/Vitis-AI/tree/3.0/dpu>`__ for the different DPU architectures and target platforms.
+The Vitis workflow enables the integration of the DPU IP as an acceleration kernel that is loaded at runtime in the form of an ``xclbin`` file. To provide developers with a reference platform that can be used as a starting point, the Vitis AI repository includes several `reference designs <https://github.com/Xilinx/Vitis-AI/tree/v3.5/dpu>`__ for the different DPU architectures and target platforms.
 
-In addition, a Vitis tutorial is available which provides the `end-to-end workflow <https://github.com/Xilinx/Vitis-Tutorials/tree/2022.1/Vitis_Platform_Creation/Design_Tutorials/02-Edge-AI-ZCU104>`__ for creating a Vitis Platform for ZCU104 targets.
+In addition, a Vitis tutorial is available which provides the `end-to-end workflow <https://github.com/Xilinx/Vitis-Tutorials/tree/2023.1/Vitis_Platform_Creation/Design_Tutorials/02-Edge-AI-ZCU104>`__ for creating a Vitis Platform for ZCU104 targets.
 
 .. figure:: reference/images/vitis_integration.PNG
    :width: 1300
@@ -149,13 +187,13 @@ In addition, a Vitis tutorial is available which provides the `end-to-end workfl
 Vivado Integration
 ~~~~~~~~~~~~~~~~~~
 
-The Vivado |trade| workflow targets traditional FPGA developers. It is important to note that the DPU IP is not currently integrated into the Vivado IP catalog. Currently, in order to update support the latest operators and network topologies at the time of Vitis AI release, the IP is released asynchronously as a `reference design and IP repository <https://github.com/Xilinx/Vitis-AI/tree/3.0/dpu>`__.
+The Vivado |trade| workflow targets traditional FPGA developers. It is important to note that the DPU IP is not currently integrated into the Vivado IP catalog. Currently, in order to update support the latest operators and network topologies at the time of Vitis AI release, the IP is released asynchronously as a reference design and IP repository.
 
 For more information, refer to the following resources:
 
 -  To integrate the DPU in a Vivado design, see this `tutorial <https://github.com/Xilinx/Vitis-AI-Tutorials/blob/2.0/Tutorials/Vitis-AI-Vivado-TRD/>`__.
 
--  A quick-start example that assists you in deploying VART on Embedded targets is available `here <https://github.com/Xilinx/Vitis-AI/tree/3.0/src/vai_runtime/quick_start_for_embedded.md>`__.
+-  A quick-start example that assists you in deploying VART on Embedded targets is available `here <https://github.com/Xilinx/Vitis-AI/tree/v3.5/src/vai_runtime/quick_start_for_embedded.md>`__.
 
 .. figure:: reference/images/vivado_integration.PNG
    :width: 1300
@@ -168,14 +206,15 @@ Vitis AI Linux Recipes
 Yocto and PetaLinux users will require bitbake recipes for the Vitis AI components that are compiled for the target. These recipes are provided in the `source code folder <https://github.com/Xilinx/Vitis-AI/tree/v3.5/src/vai_petalinux_recipes>`__.
 
 
-Yocto and PetaLinux users will require bitbake recipes for the Vitis AI components that are compiled for the target. These recipes are provided in the `source code folder <https://github.com/Xilinx/Vitis-AI/tree/3.0/src/vai_petalinux_recipes>`__.
+.. important:: For Vitis AI releases >= v2.0, Vivado users (Zynq |reg| Ultrascale+ |trade| and Kria |trade| applications) must compile VART standalone without XRT. However, Vitis users must compile VART with XRT (required for Vitis kernel integration). All designs that leverage Vitis AI require VART, while all Alveo and Versal |reg| designs must include XRT. By default, the Vitis AI Docker images incorporate XRT. Perhaps most important is that the Linux bitbake recipe for VART `assumes <https://github.com/Xilinx/Vitis-AI/tree/v3.5/src/vai_petalinux_recipes/recipes-vitis-ai/vart/vart_3.5.bb#L17>`__ by default that you are leveraging the Vitis flow. If you are leveraging the DPU in Vivado with Linux, you must either leverage ``vart_3.5_vivado.bb`` and rename it ``vart_3.5.bb`` or, comment out the line ``PACKAGECONFIG:append = " vitis"`` in the ``vart_3.5.bb`` recipe in order to ensure that you are compiling VART without XRT. Failing to do so will result in runtime errors when executing VART APIs. Specifically, XRT, which is not compatible with Vivado will error out when it attempts to load an xclbin file, a kernel file that is absent in the Vivado flow.  Finally, be sure to only include one of the two bitbake recipes in the Petalinux build folder! 
 
-.. important:: For Vitis AI releases >= v2.0, Vivado users (Zynq |reg| Ultrascale+ |trade| and Kria |trade| applications) must compile VART standalone without XRT. However, Vitis users must compile VART with XRT (required for Vitis kernel integration). All designs that leverage Vitis AI require VART, while all Alveo and Versal |reg| designs must include XRT. By default, the Vitis AI Docker images incorporate XRT. Perhaps most important is that the Linux bitbake recipe for VART `assumes <https://github.com/Xilinx/Vitis-AI/tree/3.0/src/vai_petalinux_recipes/recipes-vitis-ai/vart/vart_3.0.bb#L17>`__ by default that you are leveraging the Vitis flow. If you are leveraging the DPU in Vivado with Linux, you must either leverage ``vart_3.0_vivado.bb`` or, comment out the line ``PACKAGECONFIG:append = " vitis"`` in the ``vart_3.0.bb`` recipe in order to ensure that you are compiling VART without XRT. Failing to do so will result in runtime errors when executing VART APIs. Specifically, XRT, which is not compatible with Vivado will error out when it attempts to load an xclbin file, a kernel file that is absent in the Vivado flow.  Finally, be sure to only include one of the two bitbake recipes in the Petalinux build folder! 
 
 There are two ways to integrate the Vitis |trade| AI Library and Runtime in a custom design:
 
 - Build the Linux image using Petalinux, incorporating the necessary recipes.
-- Install Vitis AI 3.0 to the target leveraging a pre-built package at run time.  For details of this procedure, please see :ref:`Vitis AI Online Installation <vart_vail_online_install>`
+
+- Install Vitis AI 3.5 to the target leveraging a pre-built package at run time.  For details of this procedure, please see :ref:`Vitis AI Online Installation <vart_vail_online_install>`
+
 
 .. _vart_vail_online_install:
 
@@ -187,7 +226,7 @@ Runtime
 
 If you have an updated version of the Vitis AI Runtime (perhaps you have made changes to the source code) and simply wish to install the update to your target without rebuilding Petalinux, follow these steps.
 
-   -  Copy the board_setup/[TARGET] folder to the board using scp, where [TARGET] = {mpsoc, vck190} and [IP_OF_TARGET] is the IP address of the target board.
+   -  Copy the board_setup/[TARGET] folder to the board using scp, where [TARGET] = {mpsoc, vck190, vek280} and [IP_OF_TARGET] is the IP address of the target board.
 
       .. code-block:: Bash
 
@@ -204,92 +243,9 @@ If you have an updated version of the Vitis AI Runtime (perhaps you have made ch
 Library
 +++++++
 
-.. note:: The Vitis AI 3.0 RPM packages are now available.  
 
-To install the Vitis AI Library on your target you can attempt the following procedure.  This procedure may be useful if you have a custom hardware target that you wish to enable.
+.. note:: Vitis AI RPM packages will not be available until 1-3 months following the Vitis AI release.  Due to historic problems with this delay and the impact on this workflow, we will update this section of the documentation once the package is available.  Please check back on Github.IO for the latest update or `email us <amd_ai_mkt@amd.com>`__ for updates if this page is not updated prior to August 15,2023.
 
-
-1.	Verify what version, if any, of the Vitis AI Library is currently installed on the target.
-
-      .. code-block:: Bash
-	  
-		[Target] $ cat /etc/yum.repos.d/oe-remote-repo-sswreleases-rel-v2022-generic-rpm.repo
-		
-The result will be similar to the following:		
-
-      .. code-block:: Bash
-	  
-		[oe-remote-repo-sswreleases-rel-v2022-generic-rpm-cortexa72_cortexa53]
-		name=OE Remote Repo: sswreleases rel-v2022 generic rpm cortexa72_cortexa53
-		baseurl=http://petalinux.xilinx.com/sswreleases/rel-v2022/generic/rpm/cortexa72_cortexa53  (contains vai2.5 and vai3.0 rpm packages)
-		gpgcheck=0
-
-2.	Execute the command to install the latest version of the Vitis AI Library.
-
-      .. code-block:: Bash
-	  
-		   [Target] $ dnf install vitis-ai-library
-
-If a version of the Vitis AI Library is installed on the target, the result will be similar to the following.
-
-      .. code-block:: Bash
-
-		Last metadata expiration check: 2:18:44 ago on Sun Jun 25 20:53:29 2023.
-		Package vitis-ai-library-3.0-r0.0.cortexa72_cortexa53 is already installed.
-		Dependencies resolved.
-		Nothing to do.
-		Complete!
-
-3.	If you need to remove the installed Vitis AI Library, execute this command.
-
-      .. code-block:: Bash
-	  
-		   [Target] $ dnf remove vitis-ai-library
-
-The result will be similar to the following:	
-
-      .. code-block:: Bash
-
-		Transaction Summary
-		============================================================================================================================
-		Remove  1001 Packages
-
-		Freed space: 857 M
-		Is this ok [y/N]: y
-
-		Erasing… please wait a while
-
-		and then “dnf install vitis-ai-library”:
-
-		============================================================================================================================
-		Package          Architecture        Version    Repository                                                            Size
-		============================================================================================================================
-		Installing:
-		vitis-ai-library cortexa72_cortexa53 3.0-r0.0   oe-remote-repo-sswreleases-rel-v2022-generic-rpm-cortexa72_cortexa53 3.2 M
-		Installing dependencies:
-		python3-protobuf cortexa72_cortexa53 3.17.3-r0.0
-		oe-remote-repo-sswreleases-rel-v2022-generic-rpm-cortexa72_cortexa53 291 k
-		target-factory   cortexa72_cortexa53 3.0-r0.0   oe-remote-repo-sswreleases-rel-v2022-generic-rpm-cortexa72_cortexa53  98 k
-		unilog           cortexa72_cortexa53 3.0-r0.0   oe-remote-repo-sswreleases-rel-v2022-generic-rpm-cortexa72_cortexa53  25 k
-		vart             cortexa72_cortexa53 3.0-r0.0   oe-remote-repo-sswreleases-rel-v2022-generic-rpm-cortexa72_cortexa53 697 k
-		xir              cortexa72_cortexa53 3.0-r0.0   oe-remote-repo-sswreleases-rel-v2022-generic-rpm-cortexa72_cortexa53 754 k
-
-		Transaction Summary
-		============================================================================================================================
-		Install  6 Packages
-
-		Total download size: 5.0 M
-		Installed size: 28 M
-		Is this ok [y/N]: y
-
-		Please wait a while
-
-		Installed:
-		  python3-protobuf-3.17.3-r0.0.cortexa72_cortexa53                target-factory-3.0-r0.0.cortexa72_cortexa53
-		  unilog-3.0-r0.0.cortexa72_cortexa53                             vart-3.0-r0.0.cortexa72_cortexa53
-		  vitis-ai-library-3.0-r0.0.cortexa72_cortexa53                   xir-3.0-r0.0.cortexa72_cortexa53
-
-		Complete!
 
 Optimization for MPSoC Targets
 ++++++++++++++++++++++++++++++
@@ -302,7 +258,7 @@ For custom MPSOC targets you can optionally run ``zynqmp_dpu_optimize.sh`` to op
 
        cd ~/dpu_sw_optimize/zynqmp/
        ./zynqmp_dpu_optimize.sh
-
+	   
 
 Linux Devicetree Bindings
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -316,11 +272,10 @@ It is recognized that not all users will leverage PetaLinux.  Users choosing to 
 
 In addition, it is worth noting that documentation for the Vitis AI DPUCZ Devicetree bindings can be `found here <https://github.com/Xilinx/linux-xlnx/blob/master/Documentation/devicetree/bindings/misc/xlnx%2Cdpu.yaml>`__ .  These are relevant only to the DPUCZ.
 
-
 Rebuilding the Linux Image With Petalinux
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Most developers will need to build a Petalinux or Yocto Vitis AI 3.0 image for their platform. You can obtain the recipes for Vitis AI 3.0 in the following two ways:
+Most developers will need to build a Petalinux or Yocto Vitis AI 3.5 image for their platform. You can obtain the recipes for Vitis AI 3.5 in the following two ways:
 
 -  Using ``recipes-vitis-ai`` in this repo.
 -  Upgrading the Petalinux eSDK.
@@ -342,7 +297,9 @@ Using recipes-vitis-ai
 
       cp Vitis-AI/src/petalinux_recipes/recipes-vitis-ai <petalinux project>/project-spec/meta-user/
 
-2. Delete either ``recipes-vitis-ai/vart/vart_3.0.bb`` or ``recipes-vitis-ai/vart/vart_3.0_vivado.bb`` depending on workflow that you have selected for your design.  If you use ``recipes-vitis-ai/vart/vart_3.0_vivado.bb`` please rename it ``recipes-vitis-ai/vart/vart_3.0.bb``.
+
+2. Delete either ``recipes-vitis-ai/vart/vart_3.5.bb`` or ``recipes-vitis-ai/vart/vart_3.5_vivado.bb`` depending on workflow that you have selected for your design.  If you use ``recipes-vitis-ai/vart/vart_3.5_vivado.bb`` please rename it ``recipes-vitis-ai/vart/vart_3.5.bb``.
+
 
 3. Edit ``<petalinux project>/project-spec/meta-user/conf/user-rootfsconfig``
    file, appending the following lines:
@@ -366,7 +323,7 @@ Using recipes-vitis-ai
 
    .. note:
       
-      After you run the above successfully, the vitis-ai-library, VART3.0 and the dependent packages will all be installed into the rootfs image.
+      After you run the above successfully, the vitis-ai-library, VART3.5 and the dependent packages will all be installed into the rootfs image.
 
       If you want to compile the example on the target, please select the ``vitis-ai-library-dev`` and ``packagegroup-petalinux-self-hosted``. Then, recompile the system.
 
@@ -383,15 +340,14 @@ Run the following commands to upgrade PetaLinux.
 
 .. code-block:: bash
 
-     source <petalinux-v2022.2>/settings
-     petalinux-upgrade -u ‘http://petalinux.xilinx.com/sswreleases/rel-v2022/sdkupdate/2022.2_update1/’ -p ‘aarch64’
+     source <petalinux-v2023.1>/settings
+     petalinux-upgrade -u ‘http://petalinux.xilinx.com/sswreleases/rel-v2023/sdkupdate/2023.1_update1/’ -p ‘aarch64’
 
-Following this upgrade, you will find ``vitis-ai-library_3.0.bb`` recipe in ``<petalinux project>/components/yocto/layers/meta-vitis-ai``.
+Following this upgrade, you will find ``vitis-ai-library_3.5.bb`` recipe in ``<petalinux project>/components/yocto/layers/meta-vitis-ai``.
 
 For details about this process, refer to `Petalinux Upgrade <https://docs.xilinx.com/r/en-US/ug1144-petalinux-tools-reference-guide/petalinux-upgrade-Option>`__.
 
-.. note:: ``2022.2_update1`` will be released approximately 1 month after Vitis 3.0 release. The name of ``2022.2_update1`` may be changed. Modify it accordingly.
-
+.. note:: ``2023.1_update1`` will be released approximately 1 month after Vitis 3.5 release. The name of ``2023.1_update1`` may change. Modify it accordingly.
 
 Model Memory Requirements and the Linux CMA
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

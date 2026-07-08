@@ -32,9 +32,9 @@ copyright = '2024-2025, Advanced Micro Devices, Inc'
 author = 'Advanced Micro Devices, Inc'
 
 # The short X.Y version
-version = '5.0'
+version = '3.5'
 # The full version, including alpha/beta/rc tags
-release = '5.0'
+release = '3.5'
 
 # Configure HTML pages build date to today's date
 today = date.today()
@@ -119,7 +119,14 @@ language = None
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = []
+exclude_patterns = [
+    'doxygen/api/filelist.rst',
+    'doxygen/api/namespacelist.rst',
+    'doxygen/api/structlist.rst',
+    'doxygen/api/file/*',
+    'doxygen/api/namespace/*',
+    'doxygen/api/struct/*',
+]
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = None

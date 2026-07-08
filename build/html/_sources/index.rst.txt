@@ -18,11 +18,9 @@
 Vitis AI
 ############################################################
 
-.. include:: /dpu_ip_discontinued_notice.rst
-
 AMD Vitis™ AI is an integrated development environment that can be leveraged to accelerate AI inference on AMD platforms. This toolchain provides optimized IP, tools, libraries, models, as well as resources, such as example designs and tutorials that aid the user throughout the development process.  It is designed with high efficiency and ease-of-use in mind, unleashing the full potential of AI acceleration on AMD Adaptable SoCs and Alveo Data Center accelerator cards.
 
-.. figure:: docs/reference/images/VAI_IDE.PNG
+.. figure:: docs/reference/images/VAI_IDE.png
    :width: 1300
 
    Vitis AI Integrated Development Environment Block Diagram
@@ -115,7 +113,7 @@ The :ref:`Vitis AI Profiler <vitis-ai-profiler>` profiles and visualizes AI appl
    :caption: Setup and Install
    :hidden:
    
-   Release Notes <docs/reference/release_notes_5.0>
+   Release Notes <docs/reference/release_notes>
    System Requirements <docs/reference/system_requirements>
    Host Install Instructions <docs/install/install>
 
@@ -124,9 +122,8 @@ The :ref:`Vitis AI Profiler <vitis-ai-profiler>` profiles and visualizes AI appl
    :caption: Quick Start Guides
    :hidden:
 
-   Zynq™ Ultrascale+™ <docs/quickstart/mpsoc>
-   Versal™ AI Core VCK190 <docs/quickstart/vck190>
- 
+   Versal AI Edge VEK280 <docs/quickstart/vek280>
+   Alveo V70 <docs/quickstart/v70>
 
 
 .. toctree::
@@ -136,25 +133,25 @@ The :ref:`Vitis AI Profiler <vitis-ai-profiler>` profiles and visualizes AI appl
 
    Overview <docs/workflow>
    DPU IP Details and System Integration <docs/workflow-system-integration>
-   Vitis™ AI Model Zoo <docs/workflow-model-zoo>
+   Vitis AI Model Zoo <docs/workflow-model-zoo>
    Developing a Model for Vitis AI <docs/workflow-model-development>
    Deploying a Model with Vitis AI <docs/workflow-model-deployment>
-   
-.. toctree::
-   :maxdepth: 3
-   :caption: Reference Designs
-   :hidden:
 
-..   Zynq MPSoC / Kria K26 <ref_design_docs/README_DPUCZDX8G.md>
-..   Versal / VCK190 <ref_design_docs/README_DPUCVDX8G.md>
+.. toctree::
+   :maxdepth: 6
+   :caption: Runtime API Documentation
+   :hidden:
+ 
+   C++ API Class <doxygen/api/classlist>
+   Python APIs <doxygen/api/pythonlist>
 
 .. toctree::
    :maxdepth: 3
    :caption: Additional Information
    :hidden:
 
-   Vitis™ AI User Guides & IP Product Guides <docs/reference/release_documentation>
-   Vitis™ AI Developer Tutorials <https://github.com/Xilinx/Vitis-AI-Tutorials>
+   Vitis AI User Guides & IP Product Guides <docs/reference/release_documentation>
+   Vitis AI Developer Tutorials <https://github.com/Xilinx/Vitis-AI-Tutorials>
    Third-party Inference Stack Integration <docs/workflow-third-party>
    IP and Tools Compatibility <docs/reference/version_compatibility>
    Frequently Asked Questions <docs/reference/faq>
@@ -176,9 +173,8 @@ The :ref:`Vitis AI Profiler <vitis-ai-profiler>` profiles and visualizes AI appl
    FINN & Brevitas <https://xilinx.github.io/finn/>
    Inference Server <https://xilinx.github.io/inference-server/>
    Unified Inference Frontend <https://github.com/amd/UIF>   
-   Ryzen™ AI Developer Guide ~July 29 <https://ryzenai.docs.amd.com/en/latest/>
-   Vitis™ AI ONNX Runtime Execution Provider <https://onnxruntime.ai/docs/execution-providers/community-maintained/Vitis-AI-ExecutionProvider.html>
-   Vitis™ Video Analytics SDK <https://xilinx.github.io/VVAS/>
+   Vitis AI ONNX Runtime Execution Provider <https://onnxruntime.ai/docs/execution-providers/community-maintained/Vitis-AI-ExecutionProvider.html>
+   Vitis Video Analytics SDK <https://xilinx.github.io/VVAS/>
    
    
 .. |trade|  unicode:: U+02122 .. TRADEMARK SIGN

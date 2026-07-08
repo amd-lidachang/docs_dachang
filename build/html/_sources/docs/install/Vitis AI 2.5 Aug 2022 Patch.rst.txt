@@ -1,8 +1,6 @@
 August 2022 Patch
 -----------------
 
-.. include:: /dpu_ip_discontinued_notice.rst
-
 New Features/Highlights
 ~~~~~~~~~~~~~~~~~~~~~~~
 

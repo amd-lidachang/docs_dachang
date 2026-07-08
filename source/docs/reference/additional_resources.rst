@@ -1,7 +1,7 @@
+.. _additional_resources:
+
 Technical Support
 ==================
-
-.. include:: /dpu_ip_discontinued_notice.rst
 
 There are multiple avenues available to obtain technical support for Vitis |trade| AI:
 

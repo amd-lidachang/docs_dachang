@@ -2,8 +2,6 @@
 Quick Start Guide for Zynq |trade| UltraScale+ |trade| 
 ######################################################
 
-.. include:: /dpu_ip_discontinued_notice.rst
-
 The AMD **DPUCZDX8G** for Zynq |trade| Ultrascale+ |trade| is a configurable computation engine dedicated to convolutional neural networks. It supports a highly optimized instruction set, enabling the deployment of most convolutional neural networks. The following instructions will help you to install the software and packages required to support KV260/ZCU102/ZCU104.
 
 
@@ -65,6 +63,8 @@ You can start a specific distribution as follows:
 Quickstart
 **********
 
+Now, follow these steps, entering the commands in the Linux console.
+
 
 Clone the Vitis AI Repository
 =============================
@@ -101,7 +101,7 @@ Verify Docker Installation
 Pull Vitis AI Docker
 ====================
 
-In order to simplify this quickstart tutorial, we will utilize the Vitis-AI PyTorch CPU Docker to assess pre-built Vitis-AI examples, and subsequently perform quantization and compilation of our own model. The CPU docker image is generic, does not require the user to build the container, and has no specific GPU enablement requirements.  More advanced users can optionally skip this step and jump to the :doc:`Full Install Instructions <../install/install>` but we would recommend that new users start with this simpler first step.
+For this quickstart tutorial we will simply use the pre-built Vitis AI PyTorch CPU Docker.  It is generic, does not require the user to build the container, and has no specific GPU enablement requirements.  More advanced users can optionally skip this step and jump to the :doc:`Full Install Instructions <../install/install>` but we would recommend that new users start with this simpler first step.
 
 Pull and start the latest Vitis AI Docker using the following commands:
 
@@ -332,18 +332,18 @@ floating-point model as an input and performs pre-processing (folds batchnorms a
 	[Host] $ mkdir -p resnet18/model
 	
 
-2. Download the `ImageNet 1000 (mini) <https://www.kaggle.com/datasets/ifigotin/imagenetmini-1000/download?datasetVersionNumber=1>`__ dataset from Kaggle. This dataset is subset of the ILSVRC 2012-2017 dataset and comprises 1000 object classes, and contains 1,281,167 training, 50,000 validation, and 100,000 test images.  You will need to create a Kaggle account to access this dataset.  Move the downloaded `archive.zip` file into the created `/Vitis-AI/resnet18` folder and unzip the dataset.
+2. Download the `ImageNet 1000 (mini) <https://www.kaggle.com/datasets/ifigotin/imagenetmini-1000/download?datasetVersionNumber=1>`__ dataset from Kaggle. This dataset is subset of the ILSVRC 2012-2017 dataset and comprises 1000 object classes, and contains 1,281,167 training, 50,000 validation, and 100,000 test images.  You will need to create a Kaggle account to access this dataset.  Move the downloaded Archive.zip file into the created /Vitis-AI/resnet18 folder and unzip the dataset.
 
 .. code-block:: Bash
 
 	[Host] $ cd resnet18
-	[Host] $ unzip archive.zip
+	[Host] $ unzip Archive.zip
 	
 - Your workspace directory should reflect the following: 
 
 ::
 
-	├── archive.zip
+	├── Archive.zip
 	│
 	├── model    
 	│                                    
@@ -360,7 +360,7 @@ floating-point model as an input and performs pre-processing (folds batchnorms a
 .. code-block:: Bash
 	
 	[Host] $ cd ..
-	[Host] ./docker_run.sh xilinx/vitis-ai-pytorch-cpu:latest
+	[Host] ./docker_run.sh vitis-ai-pytorch-cpu:latest
 
 * Note that when you start Docker appropriate as shown above, your ``/workspace`` folder will correspond to ``/Vitis-AI`` and your initial path in Docker will be ``/workspace``.  If you inspect ``docker_run.sh`` you can see that the -v option is leveraged which links the Docker file system to your Host file system.  Verify that you see the created ``/resnet18`` subfolder in your workspace:
 
@@ -389,7 +389,7 @@ floating-point model as an input and performs pre-processing (folds batchnorms a
 
 ::
 
-	├── archive.zip
+	├── Archive.zip
 	│
 	├── model 
 	│   └── resnet18.pth             # ResNet18 floating point model downloaded from PyTorch.
@@ -457,13 +457,12 @@ floating-point model as an input and performs pre-processing (folds batchnorms a
 
 You should observe that the accuracy reported will be similar to ``top-1 / top-5 accuracy: 69.1308 / 88.7076``.  The net accuracy loss due to quantization is less than 1%.
 
-10. To generate the quantized ``.xmodel`` file that will subsequently be compiled for the DPU, run the following command with ``batch_size`` and ``subset_len`` arguments set to `1`. For model export, both of these parameters should be set `1` as multiple iterations are not required.
+10. To generate the quantized ``.xmodel`` file that will subsequently be compiled for the DPU, run the following command with ``batch_size`` and ``subset_len`` arguments set to 1 to avoid redundant iterations.
 
 .. code-block:: Bash	
 
 	[Docker] $ python resnet18_quant.py --quant_mode test --subset_len 1 --batch_size=1 --model_dir model --data_dir imagenet-mini --deploy
 
-The resultant model `resnet18_pt.xmodel` can now be found in the `resnet18/resnet18_pt` folder.
 
 Compile the model
 =================
@@ -516,7 +515,7 @@ Model Deployment
 
 	[Docker] $ scp -r resnet18_pt root@[TARGET_IP_ADDRESS]:/usr/share/vitis_ai_library/models/
 	
-* The model will be located under the ``/usr/share/vitis_ai_library/models/`` folder along with the other Vitis-AI model examples. 
+* The model will be located under the ``/usr/share/vitis_ai_library/models/`` folder along with the other Viitis-AI model examples. 
 
 2. The `vitis_ai_library_r3.0.0_images.tar.gz <https://www.xilinx.com/bin/public/openDownload?filename=vitis_ai_library_r3.0.0_images.tar.gz>`__ and `vitis_ai_library_r3.0.0_video.tar.gz <https://www.xilinx.com/bin/public/openDownload?filename=vitis_ai_library_r3.0.0_video.tar.gz>`__ packages 
 contain test images and videos that can be leveraged to evaluate our quantized model and other pre-built Vitis-AI Library examples on the target. 
@@ -562,7 +561,7 @@ If you wish to do so, you can copy the ``result.jpg`` file back to your host and
 
 .. code-block:: Bash
 
-	[Target] $ ./test_video_classification resnet18_pt ~/Vitis-AI/examples/vai_library/apps/seg_and_pose_detect/pose_960_540.avi -t 8
+	[Target] $ ./test_video_classification resnet18_pt ~/Vitis-AI/examples/vai_library/apps/pose_960_540.avi -t 8
 
 6. Users can run real time inference using a USB web camera connected to the target with the command below:
 
